@@ -1,7 +1,7 @@
 <div align="center">
   
 # Toboxa
-![icon](https://raw.githubusercontent.com/AbRamazani/Toboxa/main/files/images/root/Toboxa.png?token=GHSAT0AAAAAABPD5KXZUN2MLYRVFOSAMR2OYP3Z4DA)
+![icon](/files/images/root/Toboxa.png)
 <br> **Tool box app for your computer**
 </div>
 
