@@ -147,6 +147,7 @@ def open_stopwatch_page(pre_page):
         else:
             start_b.place(x=0, y=100, width=486, height=45)
             stop_b.place_forget()
+            cont_b.place_forget()
             reset_b.place_forget()
             lap_b.place_forget()
             laps.place_forget()
