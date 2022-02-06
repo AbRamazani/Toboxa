@@ -28,6 +28,7 @@ from merge_video import open_merge_v_page
 # other pages
 from timer import open_timer_page
 from stopwatch import open_stopwatch_page
+from net_speed import open_net_speed_page
 
 font.add_file("files/font/Vazir.ttf")
 
@@ -427,8 +428,8 @@ def home():
     stopwatch_title.place(x=215, y=170)
 
     speed_img = PhotoImage(file="files/images/other/speed-test_icon.png")
-    speed = Button(other_page, image=speed_img, bg="light blue", bd=0, activebackground="light blue", command=open_image)
-    speed_title = Button(other_page, text="سرعت اینترنت", bg="light blue", bd=0, activebackground="light blue", font=("vazir bold", 15), command=open_image)
+    speed = Button(other_page, image=speed_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_net_speed_page(root))
+    speed_title = Button(other_page, text="سرعت اینترنت", bg="light blue", bd=0, activebackground="light blue", font=("vazir bold", 15), command=lambda: open_net_speed_page(root))
     speed.place(x=0, y=50)
     speed_title.place(x=12, y=170)
 
