@@ -191,7 +191,7 @@ def open_stopwatch_page(pre_page):
         minute = m["text"]
         second = s["text"]
         s_second = ss["text"]
-        laps.insert(END, f"{hour}:{minute}:{second}:{s_second}")
+        laps.insert(END, f"{hour}:{minute}:{second}.{s_second}")
 
     start_b = Button(cadr, text="شروع", bg="light blue", font=('vazir',15,'bold'), command=start)
     start_b.place(x=0, y=100, width=486, height=45)
