@@ -29,6 +29,8 @@ from merge_video import open_merge_v_page
 from timer import open_timer_page
 from stopwatch import open_stopwatch_page
 from net_speed import open_net_speed_page
+from password_maker import open_password_maker_page
+from qrcode_maker import open_qrcode_maker_page
 
 font.add_file("files/font/Vazir.ttf")
 
@@ -434,14 +436,14 @@ def home():
     speed_title.place(x=12, y=170)
 
     password_img = PhotoImage(file="files/images/other/password_icon.png")
-    password = Button(other_page, image=password_img, bg="light blue", bd=0, activebackground="light blue", command=open_video)
-    password_title = Button(other_page, text="تولید کننده رمز", bg="light blue", bd=0, activebackground="light blue", font=("vazir bold", 15), command=open_video)
+    password = Button(other_page, image=password_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_password_maker_page(root))
+    password_title = Button(other_page, text="تولید کننده رمز", bg="light blue", bd=0, activebackground="light blue", font=("vazir bold", 15), command=lambda: open_password_maker_page(root))
     password.place(x=338, y=210)
     password_title.place(x=345, y=330)
 
     qrcode_img = PhotoImage(file="files/images/other/qr-code_icon.png")
-    qrcode = Button(other_page, image=qrcode_img, bg="light blue", bd=0, activebackground="light blue", command=open_other)
-    qrcode_title = Button(other_page, text="QRcode تولید کننده", bg="light blue", bd=0, activebackground="light blue", font=("vazir bold", 15), command=open_other)
+    qrcode = Button(other_page, image=qrcode_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_qrcode_maker_page(root))
+    qrcode_title = Button(other_page, text="QRcode تولید کننده", bg="light blue", bd=0, activebackground="light blue", font=("vazir bold", 15), command=lambda: open_qrcode_maker_page(root))
     qrcode.place(x=175, y=210)
     qrcode_title.place(x=160, y=330)
 
