@@ -160,10 +160,12 @@ def open_format_v_page(pre_page):
                     codec_f = 'libtheora'
                     audio_f = "ogg"
 
-                audio_path = f"{file_name_out.name[:-(len(file_name_out.name.split('.')[-1])+1)]}.{audio_f}"
+                audio_path = False
                 format_v.title("Toboxa=>change video format=>processing...")
                 vid_p.title(f"Toboxa=>change video format=>{path.split('/')[-1]}=>processing...")
-                film.audio.write_audiofile(audio_path)
+                if film.audio != None:
+                    audio_path = f"{file_name_out.name[:-(len(file_name_out.name.split('.')[-1])+1)]}.{audio_f}"
+                    film.audio.write_audiofile(audio_path)
                 film.write_videofile(file_name_out.name, codec=codec_f, audio=audio_path)
                 format_v.title("Toboxa=>change video format")
                 vid_p.destroy()
