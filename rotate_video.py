@@ -153,10 +153,12 @@ def open_rotate_v_page(pre_page):
                     codec_f = 'libx264'
                 elif file_name_out.name.split(".")[-1] == "avi":
                     codec_f = 'png'
-                audio_path = f"{file_name_out.name[:-(len(file_name_out.name.split('.')[-1])+1)]}.mp3"
+                audio_path = False
                 rotate_v.title("Toboxa=>rotate video=>processing...")
                 vid_p.title(f"Toboxa=>rotate video=>{path.split('/')[-1]}=>processing...")
-                film.audio.write_audiofile(audio_path)
+                if film.audio != None:
+                    audio_path = f"{file_name_out.name[:-(len(file_name_out.name.split('.')[-1])+1)]}.mp3"
+                    film.audio.write_audiofile(audio_path)
                 film = film.rotate(rotate_val.get())
                 film.write_videofile(file_name_out.name, codec=codec_f, audio=audio_path)
                 rotate_v.title("Toboxa=>rotate video")
