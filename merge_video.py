@@ -117,9 +117,9 @@ def open_merge_v_page(pre_page):
                 audio_path = False
                 merge_v.title("Toboxa=>merge video=>processing...")
                 final = concatenate_videoclips(videos_mo, method='compose')
-                if film.audio != None:
+                if final.audio != None:
                     audio_path = f"{file_name_out.name[:-(len(file_name_out.name.split('.')[-1])+1)]}.mp3"
-                    film.audio.write_audiofile(audio_path, fps=44100)
+                    final.audio.write_audiofile(audio_path, fps=44100)
                 final.write_videofile(file_name_out.name, codec=codec_f, audio=audio_path)
                 merge_v.title("Toboxa=>merge video")
                 messagebox.showinfo("ذخیره کردن ویدئو", ".ویدئو با موفقیت ذخیره شد")
