@@ -451,6 +451,27 @@ def home():
     about_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
     about_page_title = Label(about_page, text="درباره من", bg="light blue", justify="center", font=("vazir bold", 20)).place(x=175, y=0)
     Button(about_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
+    
+         Label(about_page, text="ابوالفضل رمضانی متولد سال 1386 از قائن هستم", bg="light blue", justify="center", font=("vazir bold", 15)).place(x=35, y=50)
+         Label(about_page, text=": راه های تماس", bg="light blue", justify="center", font=("vazir bold", 15)).place(x=150, y=80)
+
+    def open_link(link):
+        open(link)
+
+    github_img = PhotoImage(file="files/images/about_me/github.png")
+    Button(about_page, image=github_img, bg="light blue", activebackground="light blue", bd=0, command=lambda: open_link("https://github.com/AbRamazani")).place(x=390, y=110)
+
+    instagram_img = PhotoImage(file="files/images/about_me/instagram.png")
+    Button(about_page, image=instagram_img, bg="light blue", activebackground="light blue", bd=0, command=lambda: open_link("https://instagram.com/a.b.ramazani")).place(x=300, y=115)
+
+    telegram_img = PhotoImage(file="files/images/about_me/telegram.png")
+    Button(about_page, image=telegram_img, bg="light blue", activebackground="light blue", bd=0, command=lambda: open_link("https://t.me/A_b_Ramazani86")).place(x=210, y=110)
+
+    phone_img = PhotoImage(file="files/images/about_me/call.png")
+    Button(about_page, image=phone_img, bg="light blue", activebackground="light blue", bd=0, command=lambda: open_link("tel:09158889353")).place(x=120, y=110)
+
+    email_img = PhotoImage(file="files/images/about_me/gmail.png")
+    Button(about_page, image=email_img, bg="light blue", activebackground="light blue", bd=0, command=lambda: open_link("mailto:abolfazlramazani86@gmail.com")).place(x=30, y=110)
 
     root.mainloop()
 
