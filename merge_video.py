@@ -114,10 +114,12 @@ def open_merge_v_page(pre_page):
                     codec_f = 'libx264'
                 elif file_name_out.name.split(".")[-1] == "avi":
                     codec_f = 'png'
-                audio_path = f"{file_name_out.name[:-(len(file_name_out.name.split('.')[-1])+1)]}.mp3"
+                audio_path = False
                 merge_v.title("Toboxa=>merge video=>processing...")
                 final = concatenate_videoclips(videos_mo, method='compose')
-                final.audio.write_audiofile(audio_path, fps=44100)
+                if film.audio != None:
+                    audio_path = f"{file_name_out.name[:-(len(file_name_out.name.split('.')[-1])+1)]}.mp3"
+                    film.audio.write_audiofile(audio_path, fps=44100)
                 final.write_videofile(file_name_out.name, codec=codec_f, audio=audio_path)
                 merge_v.title("Toboxa=>merge video")
                 messagebox.showinfo("ذخیره کردن ویدئو", ".ویدئو با موفقیت ذخیره شد")
