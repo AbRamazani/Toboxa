@@ -152,17 +152,23 @@ def open_merge_v_page(pre_page):
 
     videos.bind("<<ListboxSelect>>", show_delete)
 
-    sb_list = Scrollbar(cadr)
-    sb_list.place(x=348, y=30, height=100)
+    sby_list = Scrollbar(cadr)
+    sby_list.place(x=348, y=30, height=100)
 
-    videos.configure(yscrollcommand=sb_list.set)
-    sb_list.configure(command=videos.yview)
+    sbx_list = Scrollbar(cadr, orient=HORIZONTAL)
+    sbx_list.place(x=150, y=130, width=200)
+
+    videos.configure(yscrollcommand=sby_list.set)
+    sby_list.configure(command=videos.yview)
+
+    videos.configure(xscrollcommand=sbx_list.set)
+    sbx_list.configure(command=videos.xview)
 
     delete = PhotoImage(file="files/images/video/delete.png")
     delete_b = Button(cadr, image=delete, bg="light blue", bd=0, activebackground="light blue")
 
     select = PhotoImage(file="files/images/image/select_image.png")
-    Button(cadr, image=select, bg="light blue", bd=0, activebackground="light blue", command=select_vid).place(x=150, y=135)
-    Button(cadr, text="ادغام ویدئو ها", bg="light blue", font=("vazir bold", 17), bd=0, activebackground="light blue", command=merge).place(x=180, y=336)
-
+    Button(cadr, image=select, bg="light blue", bd=0, activebackground="light blue", command=select_vid).place(x=150, y=155)
+    Button(cadr, text="ادغام ویدئو ها", bg="light blue", font=("vazir bold", 17), bd=0, activebackground="light blue", command=merge).place(x=180, y=356)
+    
     merge_v.mainloop()
