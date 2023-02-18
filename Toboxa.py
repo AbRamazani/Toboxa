@@ -452,8 +452,8 @@ def home():
     about_page_title = Label(about_page, text="درباره من", bg="light blue", justify="center", font=("vazir bold", 20)).place(x=175, y=0)
     Button(about_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
     
-         Label(about_page, text="ابوالفضل رمضانی متولد سال 1386 از قائن هستم", bg="light blue", justify="center", font=("vazir bold", 15)).place(x=35, y=50)
-         Label(about_page, text=": راه های تماس", bg="light blue", justify="center", font=("vazir bold", 15)).place(x=150, y=80)
+     Label(about_page, text="ابوالفضل رمضانی متولد سال 1386 از قائن هستم", bg="light blue", justify="center", font=("vazir bold", 15)).place(x=35, y=50)
+     Label(about_page, text=": راه های تماس", bg="light blue", justify="center", font=("vazir bold", 15)).place(x=150, y=80)
 
     def open_link(link):
         open(link)
@@ -473,7 +473,7 @@ def home():
     email_img = PhotoImage(file="files/images/about_me/gmail.png")
     Button(about_page, image=email_img, bg="light blue", activebackground="light blue", bd=0, command=lambda: open_link("mailto:abolfazlramazani86@gmail.com")).place(x=30, y=110)
     
-         Label(about_page, text=": راهنمای نرم افزار", bg="light blue", justify="center", font=("vazir bold", 15)).place(x=155, y=180)
+     Label(about_page, text=": راهنمای نرم افزار", bg="light blue", justify="center", font=("vazir bold", 15)).place(x=155, y=180)
 
     guide_qrcode = PhotoImage(file="files/images/about_me/guide-qrcode.png")
     Button(about_page, image=guide_qrcode, bg="light blue", activebackground="light blue", bd=0, command=lambda: open_link("https://drive.google.com/file/d/1sG7rxTAgtvJ8chH-bD6tUwvBNuY6tfxA/view?usp=sharing"), cursor="hand2").place(x=150, y=215)
