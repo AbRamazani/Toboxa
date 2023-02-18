@@ -1,20 +1,20 @@
 <div align="center">
   
-# Toboxa
+# توبوکسا
 ![icon](/files/images/root/Toboxa.png)
-<br> **Tool box app for your computer**
+<br> **جعبه ابزاری برای رایانه شما**
 </div>
 
-## What is Toboxa?
-**Toboxa(توبوکسا)** is a persian app for iranians who can easily access the tools they need.
-<br>These tools are divided into 5 categories. 
-### Math tools:
-Includes tools such as area calculator, calculator, unit converter and date converter.
-### Programming tools:
-Includes tools such as lorem ipsum generator (with 6 languages), web file compression (HTML, CSS, JS) and text editor.
-### Image tools:
-Includes tools such as cropping image, image resizing, change image format (in 14 formats), image rotation and put filters(10 filter) on the image.
-### Video tools:
-Includes tools such as cutting video, changing video format (in 8 formats), video rotating, and merging multiple movies.
-### Other tools:
-Includes tools such as timer, stopwatch, internet speed test, password generator and QR code generator.
+## توبوکسا چیست?
+**توبوکسا نرم افزاری نوشته شده با زبان Python و کتابخانه Tkinter است که شامل 21 ابزار برای راحتی کار کردن شما با رایانه و بی نیاز کردن شما از داشتن چندین نرم افزار می باشد..
+<br>این ابزار های به 5 دسته تقسیم می شوند
+### ابزار های ریاضی:
+شامل ابزارهایی مانند محاسبه مساحت، ماشین حساب، مبدل واحد و مبدل تاریخ است.
+### ابزار های برنامه نویسی:
+شامل ابزارهایی مانند سازنده لورم ایپسوم (در 6 زبان)، فشرده سازی فایل های وب (HTML، CSS، JS) و ویرایشگر متن است.
+### ابزار های تصویر:
+شامل ابزارهایی مانند برش تصویر، تغییر اندازه تصویر، تغییر فرمت تصویر (در 14 فرمت)، چرخش تصویر و قرار دادن فیلتر (10 فیلتر) روی تصویر است.
+### ابزار های ویدئو:
+شامل ابزارهایی مانند برش ویدیو، تغییر فرمت ویدیو (در 8 فرمت)، چرخش ویدیو و ادغام چند فیلم است.
+### سایر ابزار ها:
+شامل ابزارهایی مانند تایمر، کرونومتر، تست سرعت اینترنت، تولید کننده رمز عبور و تولید کننده کد QR است.
