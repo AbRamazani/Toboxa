@@ -63,17 +63,17 @@ def open_unit_math_page(pre_page):
         from calculator import open_calculator_page
         open_calculator_page(unit_math)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir bold", 15)).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="محاسبه مساحت", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=area).place(x=0, y=65)
-    Button(hamburgar_menu, text="تبدیل تاریخ", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=date).place(x=0, y=100)
-    Button(hamburgar_menu, text="ماشین حساب", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=calculator).place(x=0, y=135)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=unit_math.destroy).place(x=0, y=550)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
+    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
+    Button(hamburgar_menu, text="محاسبه مساحت", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=area).place(x=0, y=65)
+    Button(hamburgar_menu, text="تبدیل تاریخ", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=date).place(x=0, y=100)
+    Button(hamburgar_menu, text="ماشین حساب", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=calculator).place(x=0, y=135)
+    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=unit_math.destroy).place(x=0, y=550)
 
     # title and img
     Label(unit_math, image=img, bg="light blue").place(x=150, y=0)
-    Label(unit_math, text="مبدل واحد", bg="light blue", justify="center", font=("vazir bold", 35)).place(x=300, y=0)
+    Label(unit_math, text="مبدل واحد", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=300, y=0)
 
     # categories
 
@@ -85,21 +85,21 @@ def open_unit_math_page(pre_page):
         length.title("Toboxa=>math units converter=>length")
         length.geometry("500x500")
 
-        Label(length, text=":تبدیل از", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(length, text=":تبدیل از", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         from_to = ("متر", "سانتی متر", "اینچ", "میلی متر", "فوت", "مایل", "کیلومتر", "ذرع", "گز", "یارد")
 
         con_from = StringVar()
-        con_from_box = ttk.Combobox(length, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_from_box = ttk.Combobox(length, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(length, text=":تبدیل به", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(length, text=":تبدیل به", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         con_to = StringVar()
-        con_to_box = ttk.Combobox(length, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_to_box = ttk.Combobox(length, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(length, text=":مقدار", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(length, text=":مقدار", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
-        value = Entry(length, font=("vazir bold", 15))
+        value = Entry(length, font=("Vazirmatn", 15, "bold"))
         value.pack()
 
         def length_comp(from_val, to_val, val):
@@ -125,12 +125,12 @@ def open_unit_math_page(pre_page):
             else:
                 messagebox.showerror("خطا", "مقدار وارد شده اشتباه می باشد")
         
-        Button(length, text="محاسبه کن", bg="light blue", font=("vazir bold", 18), command=comp).pack(pady=20)
+        Button(length, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 18, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(length, bg="light blue", font=("vazir bold", 15))
+        finall_show = Label(length, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
-        to_si = Button(length, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("vazir bold", 10), bd=0, command=si_page).pack()
+        to_si = Button(length, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("Vazirmatn", 10, "bold"), bd=0, command=si_page).pack()
 
         length.mainloop()
 
@@ -143,21 +143,21 @@ def open_unit_math_page(pre_page):
         weight.title("Toboxa=>math units converter=>weight")
         weight.geometry("500x500")
 
-        Label(weight, text=":تبدیل از", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(weight, text=":تبدیل از", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         from_to = ("تن", "کیلوگرم", "پوند", "گرم", "اسلاگ", "مثقال", "سیر", "نخود", "خروار")
 
         con_from = StringVar()
-        con_from_box = ttk.Combobox(weight, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_from_box = ttk.Combobox(weight, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(weight, text=":تبدیل به", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(weight, text=":تبدیل به", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         con_to = StringVar()
-        con_to_box = ttk.Combobox(weight, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_to_box = ttk.Combobox(weight, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(weight, text=":مقدار", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(weight, text=":مقدار", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
-        value = Entry(weight, font=("vazir bold", 15))
+        value = Entry(weight, font=("Vazirmatn", 15, "bold"))
         value.pack()
 
         def weight_comp(from_val, to_val, val):
@@ -182,12 +182,12 @@ def open_unit_math_page(pre_page):
             else:
                 messagebox.showerror("خطا", "مقدار وارد شده اشتباه می باشد")
         
-        Button(weight, text="محاسبه کن", bg="light blue", font=("vazir bold", 18), command=comp).pack(pady=20)
+        Button(weight, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 18, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(weight, bg="light blue", font=("vazir bold", 15))
+        finall_show = Label(weight, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
-        to_si = Button(weight, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("vazir bold", 10), bd=0, command=si_page).pack()
+        to_si = Button(weight, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("Vazirmatn", 10, "bold"), bd=0, command=si_page).pack()
 
         weight.mainloop()
 
@@ -198,21 +198,21 @@ def open_unit_math_page(pre_page):
         volume.title("Toboxa=>math units converter=>volume")
         volume.geometry("500x500")
 
-        Label(volume, text=":تبدیل از", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(volume, text=":تبدیل از", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         from_to = ("لیتر", "میلی لیتر", "متر مکعب", "فوت مکعب", "سی سی", "اینچ مکعب", "یارد مکعب", "گالن آمریکایی", "گالن انگلیسی")
 
         con_from = StringVar()
-        con_from_box = ttk.Combobox(volume, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_from_box = ttk.Combobox(volume, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(volume, text=":تبدیل به", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(volume, text=":تبدیل به", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         con_to = StringVar()
-        con_to_box = ttk.Combobox(volume, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_to_box = ttk.Combobox(volume, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(volume, text=":مقدار", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(volume, text=":مقدار", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
-        value = Entry(volume, font=("vazir bold", 15))
+        value = Entry(volume, font=("Vazirmatn", 15, "bold"))
         value.pack()
 
         def volume_comp(from_val, to_val, val):
@@ -237,12 +237,12 @@ def open_unit_math_page(pre_page):
             else:
                 messagebox.showerror("خطا", "مقدار وارد شده اشتباه می باشد")
         
-        Button(volume, text="محاسبه کن", bg="light blue", font=("vazir bold", 18), command=comp).pack(pady=20)
+        Button(volume, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 18, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(volume, bg="light blue", font=("vazir bold", 15))
+        finall_show = Label(volume, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
-        to_si = Button(volume, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("vazir bold", 10), bd=0, command=si_page).pack()
+        to_si = Button(volume, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("Vazirmatn", 10, "bold"), bd=0, command=si_page).pack()
 
         volume.mainloop()
 
@@ -252,21 +252,21 @@ def open_unit_math_page(pre_page):
         temperature.title("Toboxa=>math units converter=>temperature")
         temperature.geometry("500x500")
 
-        Label(temperature, text=":تبدیل از", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(temperature, text=":تبدیل از", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         from_to = ("سانتی گراد", "فارنهایت", "کلوین", "رانکین")
 
         con_from = StringVar()
-        con_from_box = ttk.Combobox(temperature, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_from_box = ttk.Combobox(temperature, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(temperature, text=":تبدیل به", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(temperature, text=":تبدیل به", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         con_to = StringVar()
-        con_to_box = ttk.Combobox(temperature, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_to_box = ttk.Combobox(temperature, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(temperature, text=":مقدار", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(temperature, text=":مقدار", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
-        value = Entry(temperature, font=("vazir bold", 15))
+        value = Entry(temperature, font=("Vazirmatn", 15, "bold"))
         value.pack()
 
         def temperature_comp(from_val, to_val, val):
@@ -313,12 +313,12 @@ def open_unit_math_page(pre_page):
             else:
                 messagebox.showerror("خطا", "مقدار وارد شده اشتباه می باشد")
         
-        Button(temperature, text="محاسبه کن", bg="light blue", font=("vazir bold", 18), command=comp).pack(pady=20)
+        Button(temperature, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 18, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(temperature, bg="light blue", font=("vazir bold", 15))
+        finall_show = Label(temperature, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
-        to_si = Button(temperature, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("vazir bold", 10), bd=0, command=si_page).pack()
+        to_si = Button(temperature, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("Vazirmatn", 10, "bold"), bd=0, command=si_page).pack()
 
         temperature.mainloop()
 
@@ -329,21 +329,21 @@ def open_unit_math_page(pre_page):
         area.title("Toboxa=>math units converter=>area")
         area.geometry("500x500")
 
-        Label(area, text=":تبدیل از", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(area, text=":تبدیل از", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         from_to = ("متر مربع", "سانتی متر مربع", "فوت مربع", "اینچ مربع", "مایل مربع", "یارد مربع", "هکتار", "جریب")
 
         con_from = StringVar()
-        con_from_box = ttk.Combobox(area, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_from_box = ttk.Combobox(area, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(area, text=":تبدیل به", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(area, text=":تبدیل به", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         con_to = StringVar()
-        con_to_box = ttk.Combobox(area, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_to_box = ttk.Combobox(area, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(area, text=":مقدار", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(area, text=":مقدار", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
-        value = Entry(area, font=("vazir bold", 15))
+        value = Entry(area, font=("Vazirmatn", 15, "bold"))
         value.pack()
 
         def area_comp(from_val, to_val, val):
@@ -367,12 +367,12 @@ def open_unit_math_page(pre_page):
             else:
                 messagebox.showerror("خطا", "مقدار وارد شده اشتباه می باشد")
         
-        Button(area, text="محاسبه کن", bg="light blue", font=("vazir bold", 18), command=comp).pack(pady=20)
+        Button(area, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 18, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(area, bg="light blue", font=("vazir bold", 15))
+        finall_show = Label(area, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
-        to_si = Button(area, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("vazir bold", 10), bd=0, command=si_page).pack()
+        to_si = Button(area, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("Vazirmatn", 10, "bold"), bd=0, command=si_page).pack()
 
         area.mainloop()
 
@@ -383,21 +383,21 @@ def open_unit_math_page(pre_page):
     #     speed.title("Toboxa=>math units converter=>speed")
     #     speed.geometry("500x500")
 
-    #     Label(speed, text=":تبدیل از", bg="light blue", font=("vazir bold", 18)).pack()
+    #     Label(speed, text=":تبدیل از", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
     #     from_to = ("متر", "سانتی متر", "اینچ", "میلی متر", "فوت", "مایل", "کیلومتر", "ذرع", "گز", "یارد")
 
     #     con_from = StringVar()
-    #     con_from_box = ttk.Combobox(speed, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+    #     con_from_box = ttk.Combobox(speed, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-    #     Label(speed, text=":تبدیل به", bg="light blue", font=("vazir bold", 18)).pack()
+    #     Label(speed, text=":تبدیل به", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
     #     con_to = StringVar()
-    #     con_to_box = ttk.Combobox(speed, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+    #     con_to_box = ttk.Combobox(speed, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-    #     Label(speed, text=":مقدار", bg="light blue", font=("vazir bold", 18)).pack()
+    #     Label(speed, text=":مقدار", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
-    #     value = Entry(speed, font=("vazir bold", 15))
+    #     value = Entry(speed, font=("Vazirmatn", 15, "bold"))
     #     value.pack()
 
     def speed_page():
@@ -405,21 +405,21 @@ def open_unit_math_page(pre_page):
         speed.title("Toboxa=>math units converter=>speed")
         speed.geometry("500x500")
 
-        Label(speed, text=":تبدیل از", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(speed, text=":تبدیل از", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         from_to = ("متر بر ثانیه", "فوت بر ثانیه", "کیلومتر بر ساعت", "مایل بر ساعت", "کیلومتر بر ثانیه", "مایل بر ثانیه", "فوت بر دقیقه", "اینچ بر دقیقه")
 
         con_from = StringVar()
-        con_from_box = ttk.Combobox(speed, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_from_box = ttk.Combobox(speed, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(speed, text=":تبدیل به", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(speed, text=":تبدیل به", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         con_to = StringVar()
-        con_to_box = ttk.Combobox(speed, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_to_box = ttk.Combobox(speed, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(speed, text=":مقدار", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(speed, text=":مقدار", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
-        value = Entry(speed, font=("vazir bold", 15))
+        value = Entry(speed, font=("Vazirmatn", 15, "bold"))
         value.pack()
 
         def speed_comp(from_val, to_val, val):
@@ -443,12 +443,12 @@ def open_unit_math_page(pre_page):
             else:
                 messagebox.showerror("خطا", "مقدار وارد شده اشتباه می باشد")
         
-        Button(speed, text="محاسبه کن", bg="light blue", font=("vazir bold", 18), command=comp).pack(pady=20)
+        Button(speed, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 18, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(speed, bg="light blue", font=("vazir bold", 15))
+        finall_show = Label(speed, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
-        to_si = Button(speed, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("vazir bold", 10), bd=0, command=si_page).pack()
+        to_si = Button(speed, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("Vazirmatn", 10, "bold"), bd=0, command=si_page).pack()
 
         speed.mainloop()
 
@@ -459,21 +459,21 @@ def open_unit_math_page(pre_page):
         force.title("Toboxa=>math units converter=>force")
         force.geometry("500x500")
 
-        Label(force, text=":تبدیل از", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(force, text=":تبدیل از", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         from_to = ("نیوتن", "گرم-نیرو", "کیلوگرم-نیرو", "پوند-نیرو", "اونس-نیرو", "دین", "پوندال", "کیلوپوند")
 
         con_from = StringVar()
-        con_from_box = ttk.Combobox(force, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_from_box = ttk.Combobox(force, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(force, text=":تبدیل به", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(force, text=":تبدیل به", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         con_to = StringVar()
-        con_to_box = ttk.Combobox(force, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_to_box = ttk.Combobox(force, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(force, text=":مقدار", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(force, text=":مقدار", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
-        value = Entry(force, font=("vazir bold", 15))
+        value = Entry(force, font=("Vazirmatn", 15, "bold"))
         value.pack()
 
         def force_comp(from_val, to_val, val):
@@ -497,12 +497,12 @@ def open_unit_math_page(pre_page):
             else:
                 messagebox.showerror("خطا", "مقدار وارد شده اشتباه می باشد")
         
-        Button(force, text="محاسبه کن", bg="light blue", font=("vazir bold", 18), command=comp).pack(pady=20)
+        Button(force, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 18, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(force, bg="light blue", font=("vazir bold", 15))
+        finall_show = Label(force, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
-        to_si = Button(force, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("vazir bold", 10), bd=0, command=si_page).pack()
+        to_si = Button(force, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("Vazirmatn", 10, "bold"), bd=0, command=si_page).pack()
 
         force.mainloop()
 
@@ -513,21 +513,21 @@ def open_unit_math_page(pre_page):
         energy.title("Toboxa=>math units converter=>energy")
         energy.geometry("500x500")
 
-        Label(energy, text=":تبدیل از", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(energy, text=":تبدیل از", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         from_to = ("ژول", "کیلوژول", "وات ساعت", "کیلو وات ساعت", "کالری", "کیلوکالری", "اسب بخار-ساعت", "فوت پوند")
 
         con_from = StringVar()
-        con_from_box = ttk.Combobox(energy, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_from_box = ttk.Combobox(energy, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(energy, text=":تبدیل به", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(energy, text=":تبدیل به", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         con_to = StringVar()
-        con_to_box = ttk.Combobox(energy, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_to_box = ttk.Combobox(energy, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(energy, text=":مقدار", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(energy, text=":مقدار", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
-        value = Entry(energy, font=("vazir bold", 15))
+        value = Entry(energy, font=("Vazirmatn", 15, "bold"))
         value.pack()
 
         def energy_comp(from_val, to_val, val):
@@ -551,12 +551,12 @@ def open_unit_math_page(pre_page):
             else:
                 messagebox.showerror("خطا", "مقدار وارد شده اشتباه می باشد")
         
-        Button(energy, text="محاسبه کن", bg="light blue", font=("vazir bold", 18), command=comp).pack(pady=20)
+        Button(energy, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 18, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(energy, bg="light blue", font=("vazir bold", 15))
+        finall_show = Label(energy, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
-        to_si = Button(energy, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("vazir bold", 10), bd=0, command=si_page).pack()
+        to_si = Button(energy, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("Vazirmatn", 10, "bold"), bd=0, command=si_page).pack()
 
         energy.mainloop()
 
@@ -567,21 +567,21 @@ def open_unit_math_page(pre_page):
         power.title("Toboxa=>math units converter=>power")
         power.geometry("500x500")
 
-        Label(power, text=":تبدیل از", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(power, text=":تبدیل از", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         from_to = ("وات", "کیلووات", "اسب بخار", "ژول بر دقیقه", "ژول بر ساعت", "کالری بر دقیقه", "کالری بر ساعت", "لیتر اتمسفر بر دقیقه", "لیتر اتمسفر بر ساعت", "ارگ بر ثانیه")
 
         con_from = StringVar()
-        con_from_box = ttk.Combobox(power, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_from_box = ttk.Combobox(power, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(power, text=":تبدیل به", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(power, text=":تبدیل به", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         con_to = StringVar()
-        con_to_box = ttk.Combobox(power, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_to_box = ttk.Combobox(power, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(power, text=":مقدار", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(power, text=":مقدار", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
-        value = Entry(power, font=("vazir bold", 15))
+        value = Entry(power, font=("Vazirmatn", 15, "bold"))
         value.pack()
 
         def power_comp(from_val, to_val, val):
@@ -607,12 +607,12 @@ def open_unit_math_page(pre_page):
             else:
                 messagebox.showerror("خطا", "مقدار وارد شده اشتباه می باشد")
         
-        Button(power, text="محاسبه کن", bg="light blue", font=("vazir bold", 18), command=comp).pack(pady=20)
+        Button(power, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 18, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(power, bg="light blue", font=("vazir bold", 15))
+        finall_show = Label(power, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
-        to_si = Button(power, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("vazir bold", 10), bd=0, command=si_page).pack()
+        to_si = Button(power, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("Vazirmatn", 10, "bold"), bd=0, command=si_page).pack()
 
 
         power.mainloop()
@@ -623,21 +623,21 @@ def open_unit_math_page(pre_page):
         time.title("Toboxa=>math units converter=>time")
         time.geometry("500x500")
 
-        Label(time, text=":تبدیل از", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(time, text=":تبدیل از", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         from_to = ("میلی ثانیه", "ثانیه", "دقیقه", "ساعت", "روز", "هفته", "ماه", "سال", "دَهه", "قرن")
 
         con_from = StringVar()
-        con_from_box = ttk.Combobox(time, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_from_box = ttk.Combobox(time, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(time, text=":تبدیل به", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(time, text=":تبدیل به", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         con_to = StringVar()
-        con_to_box = ttk.Combobox(time, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_to_box = ttk.Combobox(time, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(time, text=":مقدار", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(time, text=":مقدار", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
-        value = Entry(time, font=("vazir bold", 15))
+        value = Entry(time, font=("Vazirmatn", 15, "bold"))
         value.pack()
 
         def time_comp(from_val, to_val, val):
@@ -663,12 +663,12 @@ def open_unit_math_page(pre_page):
             else:
                 messagebox.showerror("خطا", "مقدار وارد شده اشتباه می باشد")
         
-        Button(time, text="محاسبه کن", bg="light blue", font=("vazir bold", 18), command=comp).pack(pady=20)
+        Button(time, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 18, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(time, bg="light blue", font=("vazir bold", 15))
+        finall_show = Label(time, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
-        to_si = Button(time, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("vazir bold", 10), bd=0, command=si_page).pack()
+        to_si = Button(time, text="مراجعه نمایید SI برای تبدیل واحد هایی مثل فمتو، دسی، ترا و ... به بخش پسوند های", bg="light blue", activebackground="light blue", fg="red", font=("Vazirmatn", 10, "bold"), bd=0, command=si_page).pack()
 
         time.mainloop()
 
@@ -678,21 +678,21 @@ def open_unit_math_page(pre_page):
         si.title("Toboxa=>math units converter=>SI units")
         si.geometry("500x500")
 
-        Label(si, text=":تبدیل از", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(si, text=":تبدیل از", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         from_to = ("یوتا", "زتا", "اگزا", "پتا", "ترا", "گیگا", "مگا", "کیلو", "هکتو", "دکا", "یونی", "دسی", "سانتی", "میلی", "میکرو", "نانو", "پیکو", "فمتو", "آتو", "زپتو", "یوکتو")
 
         con_from = StringVar()
-        con_from_box = ttk.Combobox(si, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_from_box = ttk.Combobox(si, textvariable=con_from, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(si, text=":تبدیل به", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(si, text=":تبدیل به", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
         con_to = StringVar()
-        con_to_box = ttk.Combobox(si, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("vazir bold", 10)).pack()
+        con_to_box = ttk.Combobox(si, textvariable=con_to, values=from_to, state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).pack()
 
-        Label(si, text=":مقدار", bg="light blue", font=("vazir bold", 18)).pack()
+        Label(si, text=":مقدار", bg="light blue", font=("Vazirmatn", 18, "bold")).pack()
 
-        value = Entry(si, font=("vazir bold", 15))
+        value = Entry(si, font=("Vazirmatn", 15, "bold"))
         value.pack()
 
         def si_comp(from_val, to_val, val):
@@ -729,24 +729,24 @@ def open_unit_math_page(pre_page):
             else:
                 messagebox.showerror("خطا", "مقدار وارد شده اشتباه می باشد")
         
-        Button(si, text="محاسبه کن", bg="light blue", font=("vazir bold", 18), command=comp).pack(pady=20)
+        Button(si, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 18, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(si, bg="light blue", font=("vazir bold", 15))
+        finall_show = Label(si, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
         si.mainloop()
 
 
-    Button(cadr, text="طول", font=("vazir bold", 15), bg="light blue", width=13, height=2, command=length_page).place(x=2, y=0)
-    Button(cadr, text="جرم", font=("vazir bold", 15), bg="light blue", width=13, height=2, command=weight_page).place(x=166, y=0)
-    Button(cadr, text="حجم", font=("vazir bold", 15), bg="light blue", width=13, height=2, command=volume_page).place(x=330, y=0)
-    Button(cadr, text="دما", font=("vazir bold", 15), bg="light blue", width=13, height=2, command=temperature_page).place(x=2, y=100)
-    Button(cadr, text="مساحت", font=("vazir bold", 15), bg="light blue", width=13, height=2, command=area_page).place(x=166, y=100)
-    Button(cadr, text="سرعت", font=("vazir bold", 15), bg="light blue", width=13, height=2, command=speed_page).place(x=330, y=100)
-    Button(cadr, text="نیرو", font=("vazir bold", 15), bg="light blue", width=13, height=2, command=force_page).place(x=330, y=200)
-    Button(cadr, text="انرژی", font=("vazir bold", 15), bg="light blue", width=13, height=2, command=energy_page).place(x=166, y=200)
-    Button(cadr, text="توان", font=("vazir bold", 15), bg="light blue", width=13, height=2, command=power_page).place(x=2, y=200)
-    Button(cadr, text="زمان", font=("vazir bold", 15), bg="light blue", width=13, height=2, command=time_page).place(x=330, y=300)
-    Button(cadr, text="پسوند های \nSI", font=("vazir bold", 15), bg="light blue", width=13, height=2, command=si_page).place(x=166, y=300)
+    Button(cadr, text="طول", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=length_page).place(x=2, y=0)
+    Button(cadr, text="جرم", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=weight_page).place(x=166, y=0)
+    Button(cadr, text="حجم", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=volume_page).place(x=330, y=0)
+    Button(cadr, text="دما", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=temperature_page).place(x=2, y=100)
+    Button(cadr, text="مساحت", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=area_page).place(x=166, y=100)
+    Button(cadr, text="سرعت", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=speed_page).place(x=330, y=100)
+    Button(cadr, text="نیرو", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=force_page).place(x=330, y=200)
+    Button(cadr, text="انرژی", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=energy_page).place(x=166, y=200)
+    Button(cadr, text="توان", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=power_page).place(x=2, y=200)
+    Button(cadr, text="زمان", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=time_page).place(x=330, y=300)
+    Button(cadr, text="پسوند های \nSI", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=si_page).place(x=166, y=300)
 
     unit_math.mainloop()

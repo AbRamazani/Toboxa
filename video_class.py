@@ -9,10 +9,10 @@ class Video:
 
         self.vid_player.play()
 
-        self.play_pause_btn = Button(master, text="توقف", bg="light blue", font=("vazir"), command=self.play_pause)
+        self.play_pause_btn = Button(master, text="توقف", bg="light blue", font=("Vazirmatn"), command=self.play_pause)
         self.play_pause_btn.pack()
 
-        self.progress_slider = Scale(master, from_=0, to=self.vid_player.duration(), orient="horizontal", command=self.seek, bg="light blue", font=("vazir"))
+        self.progress_slider = Scale(master, from_=0, to=self.vid_player.duration(), orient="horizontal", command=self.seek, bg="light blue", font=("Vazirmatn"))
         self.progress_slider.pack(fill="x", padx=12.5)
 
         self.vid_player.bind("<<Duration>>", self.update_duration)

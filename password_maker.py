@@ -62,18 +62,18 @@ def open_password_maker_page(pre_page):
         from qrcode_maker import open_qrcode_maker_page
         open_qrcode_maker_page(password_maker)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir bold", 15)).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="تایمر", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=timer).place(x=0, y=65)
-    Button(hamburgar_menu, text="کرنومتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=stopwatch).place(x=0, y=100)
-    Button(hamburgar_menu, text="سرعت اینترنت", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=net_speed).place(x=0, y=135)
-    Button(hamburgar_menu, text="تولیدکننده\nQRcode", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=qrcode_maker).place(x=0, y=170)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=password_maker.destroy).place(x=0, y=550)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
+    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
+    Button(hamburgar_menu, text="تایمر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=timer).place(x=0, y=65)
+    Button(hamburgar_menu, text="کرنومتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=stopwatch).place(x=0, y=100)
+    Button(hamburgar_menu, text="سرعت اینترنت", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=net_speed).place(x=0, y=135)
+    Button(hamburgar_menu, text="تولیدکننده\nQRcode", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=qrcode_maker).place(x=0, y=170)
+    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=password_maker.destroy).place(x=0, y=550)
 
     # title and img
     Label(password_maker, image=img, bg="light blue").place(x=150, y=0)
-    Label(password_maker, text="تولیدکننده رمز", bg="light blue", justify="center", font=("vazir bold", 30)).place(x=320, y=15)
+    Label(password_maker, text="تولیدکننده رمز", bg="light blue", justify="center", font=("Vazirmatn", 30, "bold")).place(x=320, y=15)
 
     # categories
 
@@ -81,14 +81,14 @@ def open_password_maker_page(pre_page):
     cadr.place(x=150, y=150)
 
     numbers = IntVar()
-    numbers_c = Checkbutton(cadr, text="استفاده از اعداد", variable=numbers, bg="light blue", font=("vazir", 13)).place(x=300, y=0)
+    numbers_c = Checkbutton(cadr, text="استفاده از اعداد", variable=numbers, bg="light blue", font=("Vazirmatn", 13)).place(x=300, y=0)
 
     puncts = IntVar()
-    puncts_cadr = Checkbutton(cadr, text="(...,#,*)استفاده از علائم", variable=puncts, bg="light blue", font=("vazir", 13)).place(x=50, y=0)
+    puncts_cadr = Checkbutton(cadr, text="(...,#,*)استفاده از علائم", variable=puncts, bg="light blue", font=("Vazirmatn", 13)).place(x=50, y=0)
 
-    Label(cadr, text=": تعداد کاراکتر", bg="light blue", font=("vazir bold", 15)).place(x=335, y=50)
+    Label(cadr, text=": تعداد کاراکتر", bg="light blue", font=("Vazirmatn", 15, "bold")).place(x=335, y=50)
     count = IntVar(value=12)
-    count_cadr = Spinbox(cadr, from_=5, to=50, textvariable=count, wrap=True, font=("vazir bold", 13)).place(x=50, y=50, width=280)
+    count_cadr = Spinbox(cadr, from_=5, to=50, textvariable=count, wrap=True, font=("Vazirmatn", 13, "bold")).place(x=50, y=50, width=280)
     
 
     def make_lorem():
@@ -109,9 +109,9 @@ def open_password_maker_page(pre_page):
         result.delete("1.0", END)
         result.insert(END, password)          
 
-    Button(cadr, text="بساز", bg="light blue", font=("vazir bold", 15), width=35, command=make_lorem).place(x=50, y=105)
+    Button(cadr, text="بساز", bg="light blue", font=("Vazirmatn", 15, "bold"), width=35, command=make_lorem).place(x=50, y=105)
 
-    result = Text(cadr, font=("vazir bold", 13), height=9, width=42, bg="light yellow")
+    result = Text(cadr, font=("Vazirmatn", 13, "bold"), height=9, width=42, bg="light yellow")
     result.place(x=35, y=170)
 
     def copy_result():
@@ -119,6 +119,6 @@ def open_password_maker_page(pre_page):
         copy(text)
         messagebox.showinfo("کپی", "رمز کپی شد")
 
-    Button(cadr, text="کپی", bg="light blue", font=("vazir bold", 10), command=copy_result).place(x=458, y=399, width=30)
+    Button(cadr, text="کپی", bg="light blue", font=("Vazirmatn", 10, "bold"), command=copy_result).place(x=458, y=399, width=30)
 
     password_maker.mainloop()

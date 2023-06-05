@@ -60,18 +60,18 @@ def open_rotate_i_page(pre_page):
         from filter_image import open_filter_i_page
         open_filter_i_page(rotate_i)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir bold", 15)).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="بُرش تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=crop_i).place(x=0, y=65)
-    Button(hamburgar_menu, text="تغییر اندازه", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=resize_i).place(x=0, y=100)
-    Button(hamburgar_menu, text="تغییر پسوند", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=format_i).place(x=0, y=135)
-    Button(hamburgar_menu, text="قراردادن فیلتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=filter_i).place(x=0, y=170)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=rotate_i.destroy).place(x=0, y=550)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
+    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
+    Button(hamburgar_menu, text="بُرش تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=crop_i).place(x=0, y=65)
+    Button(hamburgar_menu, text="تغییر اندازه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=resize_i).place(x=0, y=100)
+    Button(hamburgar_menu, text="تغییر پسوند", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=format_i).place(x=0, y=135)
+    Button(hamburgar_menu, text="قراردادن فیلتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=filter_i).place(x=0, y=170)
+    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=rotate_i.destroy).place(x=0, y=550)
 
     # title and img
     Label(rotate_i, image=img, bg="light blue").place(x=150, y=0)
-    Label(rotate_i, text="چرخاندن تصویر", bg="light blue", justify="center", font=("vazir bold", 35)).place(x=315, y=0)
+    Label(rotate_i, text="چرخاندن تصویر", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=315, y=0)
 
     # categories
 
@@ -105,7 +105,7 @@ def open_rotate_i_page(pre_page):
         hn = round(photo.height / n_h)
         wn = round(hn / ta)
         photo1 = ImageTk.PhotoImage(image=photo.resize((wn, hn)))
-        Label(img_p, text="توجه : تصویر زیر تنها برای نمایش خروجی است و خروجی با کیفیت اصلی ذخیره می شود", bg="light blue", font=("vazir bold", 10), fg="red").pack()
+        Label(img_p, text="توجه : تصویر زیر تنها برای نمایش خروجی است و خروجی با کیفیت اصلی ذخیره می شود", bg="light blue", font=("Vazirmatn", 10, "bold"), fg="red").pack()
         img_rotate = Label(img_p, image=photo1, bd=0)
         img_rotate.pack()
         photo.resize((round(wn*n_h), round(hn*n_h)))
@@ -144,10 +144,10 @@ def open_rotate_i_page(pre_page):
             rotate_val.set(rotate_value)
             rotate_show()
 
-        Label(img_p, text="میزان چرخش(پادساعتگرد)", bg="light blue", font=("vazir bold", 14)).pack()
+        Label(img_p, text="میزان چرخش(پادساعتگرد)", bg="light blue", font=("Vazirmatn", 14, "bold")).pack()
 
         rotate_val = IntVar(value=360)
-        rotate_s = Spinbox(img_p, font=("vazir bold", 15), textvariable=rotate_val, from_=1, to=360, wrap=True, command=rotate_show)
+        rotate_s = Spinbox(img_p, font=("Vazirmatn", 15, "bold"), textvariable=rotate_val, from_=1, to=360, wrap=True, command=rotate_show)
         rotate_s.pack()
 
         rotate_s.bind("<Key>", rotate_show)
@@ -184,7 +184,7 @@ def open_rotate_i_page(pre_page):
             hn = round(photo.height / n_h)
             wn = round(hn / ta)
             photo1 = ImageTk.PhotoImage(image=photo.resize((wn, hn)))
-            Label(pro_p, text="توجه : تصویر زیر تنها برای نمایش خروجی است و خروجی با کیفیت اصلی ذخیره می شود", bg="light blue", font=("vazir bold", 10), fg="red").pack()
+            Label(pro_p, text="توجه : تصویر زیر تنها برای نمایش خروجی است و خروجی با کیفیت اصلی ذخیره می شود", bg="light blue", font=("Vazirmatn", 10, "bold"), fg="red").pack()
             img_flip = Label(pro_p, image=photo1, bd=0)
             img_flip.pack()
             photo.resize((round(wn*n_h), round(hn*n_h)))
@@ -229,18 +229,18 @@ def open_rotate_i_page(pre_page):
                 f_v.pack(side=RIGHT, padx=5, fill=X, expand=True, pady=10)
                 f_h.pack(side=RIGHT, padx=5, fill=X, expand=True, pady=10)
 
-            f_v = Button(pro_p, text="قرینه عمودی", bg="light blue", font=("vazir bold", 15), command=lambda: change_flip(Image.FLIP_TOP_BOTTOM))
+            f_v = Button(pro_p, text="قرینه عمودی", bg="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: change_flip(Image.FLIP_TOP_BOTTOM))
             f_v.pack(side=RIGHT, padx=5, fill=X, expand=True, pady=10)
-            f_h = Button(pro_p, text="قرینه افقی", bg="light blue", font=("vazir bold", 15), command=lambda: change_flip(Image.FLIP_LEFT_RIGHT))
+            f_h = Button(pro_p, text="قرینه افقی", bg="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: change_flip(Image.FLIP_LEFT_RIGHT))
             f_h.pack(side=RIGHT, padx=5, fill=X, expand=True, pady=10)
 
-            render = Button(pro_p, text="انجام", bg="light blue", font=("vazir bold", 15), command=flip_image)
-            back = Button(pro_p, text="بازگشت", bg="light blue", font=("vazir bold", 15), command=back_chose)
+            render = Button(pro_p, text="انجام", bg="light blue", font=("Vazirmatn", 15, "bold"), command=flip_image)
+            back = Button(pro_p, text="بازگشت", bg="light blue", font=("Vazirmatn", 15, "bold"), command=back_chose)
 
             pro_p.mainloop()
 
-        Button(img_p, text="انجام", bg="light blue", font=("vazir bold", 15), command=rotate_image).pack()
-        Button(img_p, text="گزینه های پیشرفته", bg="light blue", font=("vazir bold", 15), command=option_pro).pack(pady=10)
+        Button(img_p, text="انجام", bg="light blue", font=("Vazirmatn", 15, "bold"), command=rotate_image).pack()
+        Button(img_p, text="گزینه های پیشرفته", bg="light blue", font=("Vazirmatn", 15, "bold"), command=option_pro).pack(pady=10)
 
         img_p.mainloop()
 
@@ -253,6 +253,6 @@ def open_rotate_i_page(pre_page):
     
     select = PhotoImage(file="files/images/image/select_image.png")
     Button(cadr, image=select, bg="light blue", command=open_img, bd=0, activebackground="light blue").place(x=150, y=0)
-    Button(cadr, text="انتخاب تصویر", bg="light blue", font=("vazir bold", 17), command=open_img, bd=0, activebackground="light blue").place(x=185, y=200)
+    Button(cadr, text="انتخاب تصویر", bg="light blue", font=("Vazirmatn", 17, "bold"), command=open_img, bd=0, activebackground="light blue").place(x=185, y=200)
 
     rotate_i.mainloop()

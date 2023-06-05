@@ -100,18 +100,18 @@ def open_crop_i_page(pre_page):
         from filter_image import open_filter_i_page
         open_filter_i_page(crop_i)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir bold", 15)).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="تغییر اندازه", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=resize_i).place(x=0, y=65)
-    Button(hamburgar_menu, text="تغییر پسوند", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=format_i).place(x=0, y=100)
-    Button(hamburgar_menu, text="چرخاندن تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=rotate_i).place(x=0, y=135)
-    Button(hamburgar_menu, text="قراردادن فیلتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=filter_i).place(x=0, y=170)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=crop_i.destroy).place(x=0, y=550)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
+    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
+    Button(hamburgar_menu, text="تغییر اندازه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=resize_i).place(x=0, y=65)
+    Button(hamburgar_menu, text="تغییر پسوند", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=format_i).place(x=0, y=100)
+    Button(hamburgar_menu, text="چرخاندن تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=rotate_i).place(x=0, y=135)
+    Button(hamburgar_menu, text="قراردادن فیلتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=filter_i).place(x=0, y=170)
+    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=crop_i.destroy).place(x=0, y=550)
 
     # title and img
     Label(crop_i, image=img, bg="light blue").place(x=150, y=0)
-    Label(crop_i, text="برش تصویر", bg="light blue", justify="center", font=("vazir bold", 35)).place(x=350, y=0)
+    Label(crop_i, text="برش تصویر", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=350, y=0)
 
     # categories
 
@@ -247,7 +247,7 @@ def open_crop_i_page(pre_page):
             help_p.geometry("538x684")
             help_p.config(bg="light blue")
 
-            Label(help_p, text="ویدئوی آموزش بُرش زدن تصویر", bg="light blue", font=("vazir bold", 15)).pack()
+            Label(help_p, text="ویدئوی آموزش بُرش زدن تصویر", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
             def update_duration(event):
                 """ updates the duration after finding the duration """
                 end_time["text"] = str(datetime.timedelta(seconds=vid_player.duration())).split(".")[0]
@@ -300,33 +300,33 @@ def open_crop_i_page(pre_page):
 
             vid_player.play()
 
-            play_pause_btn = Button(help_p, text="توقف", bg="light blue", font=("vazir"), command=play_pause)
+            play_pause_btn = Button(help_p, text="توقف", bg="light blue", font=("Vazirmatn"), command=play_pause)
             play_pause_btn.pack()
 
-            skip_plus_5sec = Button(help_p, text="پنج ثانیه قبل", bg="light blue", font=("vazir"), command=lambda: skip(-5))
+            skip_plus_5sec = Button(help_p, text="پنج ثانیه قبل", bg="light blue", font=("Vazirmatn"), command=lambda: skip(-5))
             skip_plus_5sec.pack(side="left")
 
-            start_time = Label(help_p, text=str(datetime.timedelta(seconds=0)), bg="light blue", font=("vazir"))
+            start_time = Label(help_p, text=str(datetime.timedelta(seconds=0)), bg="light blue", font=("Vazirmatn"))
             start_time.pack(side="left")
 
-            progress_slider = Scale(help_p, from_=0, to=vid_player.duration(), orient="horizontal", command=seek, bg="light blue", font=("vazir"))
+            progress_slider = Scale(help_p, from_=0, to=vid_player.duration(), orient="horizontal", command=seek, bg="light blue", font=("Vazirmatn"))
             progress_slider.pack(side="left", fill="x", expand=True)
             
-            end_time = Label(help_p, text=str(datetime.timedelta(seconds=vid_player.duration())).split(".")[0], bg="light blue", font=("vazir"))
+            end_time = Label(help_p, text=str(datetime.timedelta(seconds=vid_player.duration())).split(".")[0], bg="light blue", font=("Vazirmatn"))
             end_time.pack(side="left")
 
             vid_player.bind("<<Duration>>", update_duration)
             vid_player.bind("<<SecondChanged>>", update_scale)
             vid_player.bind("<<Ended>>", video_ended )
 
-            skip_plus_5sec = Button(help_p, text="پنج ثانیه بعد", bg="light blue", font=("vazir"), command=lambda: skip(5))
+            skip_plus_5sec = Button(help_p, text="پنج ثانیه بعد", bg="light blue", font=("Vazirmatn"), command=lambda: skip(5))
             skip_plus_5sec.pack(side="left")
 
             help_p.mainloop()
 
-        c_b = Button(img_p, text="انجام", bg="light blue", font=("vazir bold", 12), command=crop)
+        c_b = Button(img_p, text="انجام", bg="light blue", font=("Vazirmatn", 12, "bold"), command=crop)
         c_b.pack(pady=25)
-        h_b = Button(img_p, text="راهنما", bg="light blue", font=("vazir bold", 11), command=help_page)
+        h_b = Button(img_p, text="راهنما", bg="light blue", font=("Vazirmatn", 11, "bold"), command=help_page)
         h_b.pack()
 
         img_p.update()
@@ -338,10 +338,10 @@ def open_crop_i_page(pre_page):
 
         w_bs = page_width/4
 
-        Button(img_p, bg="red", command=lambda: set_color("red"), text="بالا", font=("vazir bold", 10)).place(x=w_bs*3, y=img_height+1.5, width=w_bs, height=20)
-        Button(img_p, bg="blue", command=lambda: set_color("blue"), text="راست", font=("vazir bold", 10)).place(x=w_bs*2, y=img_height+1.5, width=w_bs, height=20)
-        Button(img_p, bg="green", command=lambda: set_color("green"), text="چپ", font=("vazir bold", 10)).place(x=w_bs, y=img_height+1.5, width=w_bs, height=20)
-        Button(img_p, bg="yellow", command=lambda: set_color("yellow"), text="پایین", font=("vazir bold", 10)).place(x=2, y=img_height+1.5, width=w_bs, height=20)
+        Button(img_p, bg="red", command=lambda: set_color("red"), text="بالا", font=("Vazirmatn", 10, "bold")).place(x=w_bs*3, y=img_height+1.5, width=w_bs, height=20)
+        Button(img_p, bg="blue", command=lambda: set_color("blue"), text="راست", font=("Vazirmatn", 10, "bold")).place(x=w_bs*2, y=img_height+1.5, width=w_bs, height=20)
+        Button(img_p, bg="green", command=lambda: set_color("green"), text="چپ", font=("Vazirmatn", 10, "bold")).place(x=w_bs, y=img_height+1.5, width=w_bs, height=20)
+        Button(img_p, bg="yellow", command=lambda: set_color("yellow"), text="پایین", font=("Vazirmatn", 10, "bold")).place(x=2, y=img_height+1.5, width=w_bs, height=20)
 
         img_p.bind("<Up>", change_pmo)
         img_p.bind("<Down>", change_pma)
@@ -357,6 +357,6 @@ def open_crop_i_page(pre_page):
 
     select = PhotoImage(file="files/images/image/select_image.png")
     Button(cadr, image=select, bg="light blue", command=open_img, bd=0, activebackground="light blue").place(x=150, y=0)
-    Button(cadr, text="انتخاب تصویر", bg="light blue", font=("vazir bold", 17), command=open_img, bd=0, activebackground="light blue").place(x=185, y=200)
+    Button(cadr, text="انتخاب تصویر", bg="light blue", font=("Vazirmatn", 17, "bold"), command=open_img, bd=0, activebackground="light blue").place(x=185, y=200)
 
     crop_i.mainloop()

@@ -60,18 +60,18 @@ def open_net_speed_page(pre_page):
         from qrcode_maker import open_qrcode_maker_page
         open_qrcode_maker_page(net_speed)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir bold", 15)).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="تایمر", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=timer).place(x=0, y=65)
-    Button(hamburgar_menu, text="کرنومتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=stopwatch).place(x=0, y=100)
-    Button(hamburgar_menu, text="تولیدکننده رمز", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=password_maker).place(x=0, y=135)
-    Button(hamburgar_menu, text="تولیدکننده\nQRcode", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=qrcode_maker).place(x=0, y=170)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=net_speed.destroy).place(x=0, y=550)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
+    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
+    Button(hamburgar_menu, text="تایمر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=timer).place(x=0, y=65)
+    Button(hamburgar_menu, text="کرنومتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=stopwatch).place(x=0, y=100)
+    Button(hamburgar_menu, text="تولیدکننده رمز", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=password_maker).place(x=0, y=135)
+    Button(hamburgar_menu, text="تولیدکننده\nQRcode", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=qrcode_maker).place(x=0, y=170)
+    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=net_speed.destroy).place(x=0, y=550)
 
     # title and img
     Label(net_speed, image=img, bg="light blue").place(x=150, y=0)
-    Label(net_speed, text="تست سرعت اینترنت", bg="light blue", justify="center", font=("vazir bold", 28)).place(x=320, y=15)
+    Label(net_speed, text="تست سرعت اینترنت", bg="light blue", justify="center", font=("Vazirmatn", 28, "bold")).place(x=320, y=15)
 
     # categories
 
@@ -135,19 +135,19 @@ def open_net_speed_page(pre_page):
             ping_l.place(x=10, y=250)
         net_speed.title("Toboxa=>test internet speed")
 
-    du_b = Button(cadr, text="سرعت بارگیری و بارگذاری", bg="light blue", font=('vazir',15,'bold'), command=start_du)
+    du_b = Button(cadr, text="سرعت بارگیری و بارگذاری", bg="light blue", font=('Vazirmatn',15,'bold'), command=start_du)
     du_b.place(x=0, y=50, width=486, height=45)
 
-    download_s = Label(cadr, bg="light blue", font=('vazir',13))
-    upload_s = Label(cadr, bg="light blue", font=('vazir',13))
+    download_s = Label(cadr, bg="light blue", font=('Vazirmatn',13))
+    upload_s = Label(cadr, bg="light blue", font=('Vazirmatn',13))
 
-    ping_b = Button(cadr, text="اندازه گیری پینگ", bg="light blue", font=('vazir',15,'bold'), command=open_ping)
+    ping_b = Button(cadr, text="اندازه گیری پینگ", bg="light blue", font=('Vazirmatn',15,'bold'), command=open_ping)
     ping_b.place(x=0, y=100, width=486, height=45)
 
-    url_l = Label(cadr, text=": آدرس سایت", bg="light blue", font=('vazir',13))
-    url_e = Entry(cadr, font=('vazir',15,'bold'))
-    pings_b = Button(cadr, text="اندازه گیری", bg="light blue", font=('vazir',13,'bold'), command=start_ping)
+    url_l = Label(cadr, text=": آدرس سایت", bg="light blue", font=('Vazirmatn',13))
+    url_e = Entry(cadr, font=('Vazirmatn',15,'bold'))
+    pings_b = Button(cadr, text="اندازه گیری", bg="light blue", font=('Vazirmatn',13,'bold'), command=start_ping)
 
-    ping_l = Label(cadr, bg="light blue", font=('vazir',13))
+    ping_l = Label(cadr, bg="light blue", font=('Vazirmatn',13))
     
     net_speed.mainloop()
