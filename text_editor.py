@@ -52,7 +52,7 @@ def open_texte_page(pre_page):
         from compress import open_compress_page
         open_compress_page(texte)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn bold", 15)).place(x=0, y=0)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
     Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
     Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
     Button(hamburgar_menu, text="لورم ساز", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=lorem).place(x=0, y=65)
@@ -61,7 +61,7 @@ def open_texte_page(pre_page):
 
     # title and img
     Label(texte, image=img, bg="light blue").place(x=150, y=0)
-    Label(texte, text="ویرایشگر متن", bg="light blue", justify="center", font=("Vazirmatn bold", 35)).place(x=330, y=20)
+    Label(texte, text="ویرایشگر متن", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=330, y=20)
 
     # categories
 
@@ -77,7 +77,7 @@ def open_texte_page(pre_page):
 
     class Line:
         def __init__(self, master) -> None:
-            self.line_l = Label(master, text="|", bg="#00ADB5", fg="#EEEEEE", font=("Vazirmatn bold", 18))
+            self.line_l = Label(master, text="|", bg="#00ADB5", fg="#EEEEEE", font=("Vazirmatn", 18, "bold"))
 
         def place(self, x, y):
             """place the widget"""
@@ -87,7 +87,7 @@ def open_texte_page(pre_page):
             """clear the widget from the screen"""
             self.line_l.place_forget()
 
-    file_name_l = Label(menubar, text="--بدون عنوان--", bg="#00ADB5", fg="#EEEEEE", font=("Vazirmatn bold", 15))
+    file_name_l = Label(menubar, text="--بدون عنوان--", bg="#00ADB5", fg="#EEEEEE", font=("Vazirmatn", 15, "bold"))
     file_name_l.place(x=0, y=0)
 
     Line(menubar).place(x=430, y=0)
@@ -109,7 +109,7 @@ def open_texte_page(pre_page):
         file_b.config(bg="#EEEEEE", fg="#00ADB5")
         edit_b.config(bg="#00ADB5", fg="#EEEEEE")
 
-    file_b = Button(menubar, text="فایل", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 13), bd=0, command=open_file_f)
+    file_b = Button(menubar, text="فایل", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 13, "bold"), bd=0, command=open_file_f)
     file_b.place(x=440, y=0)
 
     # file
@@ -195,24 +195,24 @@ def open_texte_page(pre_page):
             except:
                 pass
 
-    open_b = Button(file_f, text="باز کردن", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 13), bd=0, command=open_file)
+    open_b = Button(file_f, text="باز کردن", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 13, "bold"), bd=0, command=open_file)
     open_b.place(x=415, y=0)
 
     Line(file_f).place(x=405, y=0)
 
-    save_b = Button(file_f, text="ذخیره", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 13), bd=0, command=save_file)
+    save_b = Button(file_f, text="ذخیره", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 13, "bold"), bd=0, command=save_file)
     save_b.place(x=355, y=0)
 
     Line(file_f).place(x=345, y=0)
 
-    save_as_b = Button(file_f, text="ذخیره به عنوان", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 13), bd=0, command=save_as_file)
+    save_as_b = Button(file_f, text="ذخیره به عنوان", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 13, "bold"), bd=0, command=save_as_file)
     save_as_b.place(x=235, y=0)
 
     line_cl = Line(file_f)
 
-    close_b = Button(file_f, text="بستن فایل", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 13), bd=0, command=close_file)
+    close_b = Button(file_f, text="بستن فایل", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 13, "bold"), bd=0, command=close_file)
 
-    close_file_f = Button(file_f, text="×", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 15), bd=0, command=close_menus)
+    close_file_f = Button(file_f, text="×", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 15, "bold"), bd=0, command=close_menus)
     close_file_f.place(x=0, y=0)
 
     # _________________________________________
@@ -225,7 +225,7 @@ def open_texte_page(pre_page):
         file_b.config(bg="#00ADB5", fg="#EEEEEE")
         edit_b.config(bg="#EEEEEE", fg="#00ADB5")
 
-    edit_b = Button(menubar, text="ویرایش", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 13), bd=0, command=open_edit_f)
+    edit_b = Button(menubar, text="ویرایش", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 13, "bold"), bd=0, command=open_edit_f)
     edit_b.place(x=370, y=0)
 
     # edit
@@ -250,25 +250,25 @@ def open_texte_page(pre_page):
         text_box.delete(SEL_FIRST, SEL_LAST)
         change(None)
 
-    cut_b = Button(edit_f, text="بُرش", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 13), bd=0, command=cut_text)
+    cut_b = Button(edit_f, text="بُرش", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 13, "bold"), bd=0, command=cut_text)
     cut_b.place(x=440, y=0)
 
     Line(edit_f).place(x=430, y=0)
 
-    copy_b = Button(edit_f, text="رونوشت", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 13), bd=0, command=copy_text)
+    copy_b = Button(edit_f, text="رونوشت", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 13, "bold"), bd=0, command=copy_text)
     copy_b.place(x=365, y=0)
 
     Line(edit_f).place(x=355, y=0)
 
-    paste_b = Button(edit_f, text="چسباندن", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 13), bd=0, command=paste_text)
+    paste_b = Button(edit_f, text="چسباندن", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 13, "bold"), bd=0, command=paste_text)
     paste_b.place(x=285, y=0)
 
     Line(edit_f).place(x=275, y=0)
 
-    delete_b = Button(edit_f, text="حذف", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 13), bd=0, command=delete_text)
+    delete_b = Button(edit_f, text="حذف", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 13, "bold"), bd=0, command=delete_text)
     delete_b.place(x=230, y=0)
 
-    close_edit_f = Button(edit_f, text="×", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 15), bd=0, command=close_menus)
+    close_edit_f = Button(edit_f, text="×", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 15, "bold"), bd=0, command=close_menus)
     close_edit_f.place(x=0, y=0)
 
     # _________________________________
@@ -287,14 +287,14 @@ def open_texte_page(pre_page):
         file_h = Frame(pages, bg="#EEEEE0")
         file_h.pack(fill="both", expand=True)
 
-        open_l = LabelFrame(file_h, bg="#EEEEE9", text="باز کردن", font=("Vazirmatn bold", 12))
+        open_l = LabelFrame(file_h, bg="#EEEEE9", text="باز کردن", font=("Vazirmatn", 12, "bold"))
         open_l.pack(fill="both", expand=True)
 
         text_o_h = """.این گزینه برای باز کردن یک فایل از داخل رایانه شما و ایجاد تغییرات در آن است"""
 
         Label(open_l, bg="#EEEEE9", fg="black", font=("Vazirmatn", 10), justify="center", text=text_o_h).pack(fill="both", expand=True)
 
-        save_l = LabelFrame(file_h, bg="#EEEEE9", text="ذخیره", font=("Vazirmatn bold", 12))
+        save_l = LabelFrame(file_h, bg="#EEEEE9", text="ذخیره", font=("Vazirmatn", 12, "bold"))
         save_l.pack(fill="both", expand=True)
 
         text_s_h = """.این گزینه برای ذخیره کردن فایل باز شده توسط شما در خود فایل است
@@ -302,14 +302,14 @@ def open_texte_page(pre_page):
 
         Label(save_l, bg="#EEEEE9", fg="black", font=("Vazirmatn", 10), justify="center", text=text_s_h).pack(fill="both", expand=True)
 
-        save_as_l = LabelFrame(file_h, bg="#EEEEE9", text="ذخیره به عنوان", font=("Vazirmatn bold", 12))
+        save_as_l = LabelFrame(file_h, bg="#EEEEE9", text="ذخیره به عنوان", font=("Vazirmatn", 12, "bold"))
         save_as_l.pack(fill="both", expand=True)
 
         text_sa_h = """.این گزینه برای ذخیره کردن نوشته ها در فایل دیگری در رایانه شماست"""
 
         Label(save_as_l, bg="#EEEEE9", fg="black", font=("Vazirmatn", 10), justify="center", text=text_sa_h).pack(fill="both", expand=True)
 
-        close_l = LabelFrame(file_h, bg="#EEEEE9", text="بستن", font=("Vazirmatn bold", 12))
+        close_l = LabelFrame(file_h, bg="#EEEEE9", text="بستن", font=("Vazirmatn", 12, "bold"))
         close_l.pack(fill="both", expand=True)
 
         text_c_h = """.با استفاده از این گزینه می توانید فایل باز شده را ببندید
@@ -321,7 +321,7 @@ def open_texte_page(pre_page):
         edit_h = Frame(pages, bg="#EEEEE0")
         edit_h.pack(fill="both", expand=True)
         
-        cut_l = LabelFrame(edit_h, bg="#EEEEE9", text="بُرش", font=("Vazirmatn bold", 12))
+        cut_l = LabelFrame(edit_h, bg="#EEEEE9", text="بُرش", font=("Vazirmatn", 12, "bold"))
         cut_l.pack(fill="both", expand=True)
 
         text_cu_h = """می باشد که متن مورد نظر خود را انتخاب و با این گزینه از آن رونوشت گرفته Cut این گزینه معادل
@@ -329,21 +329,21 @@ def open_texte_page(pre_page):
 
         Label(cut_l, bg="#EEEEE9", fg="black", font=("Vazirmatn", 10), justify="center", text=text_cu_h).pack(fill="both", expand=True)
         
-        copy_l = LabelFrame(edit_h, bg="#EEEEE9", text="رونوشت", font=("Vazirmatn bold", 12))
+        copy_l = LabelFrame(edit_h, bg="#EEEEE9", text="رونوشت", font=("Vazirmatn", 12, "bold"))
         copy_l.pack(fill="both", expand=True)
 
         text_co_h = """.می باشد که متن مورد نظر خود را انتخاب و با این گزینه از آن رونوشت گرفته می شود Copy این گزینه معادل"""
 
         Label(copy_l, bg="#EEEEE9", fg="black", font=("Vazirmatn", 10), justify="center", text=text_co_h).pack(fill="both", expand=True)
 
-        paste_l = LabelFrame(edit_h, bg="#EEEEE9", text="ذخیره به عنوان", font=("Vazirmatn bold", 12))
+        paste_l = LabelFrame(edit_h, bg="#EEEEE9", text="ذخیره به عنوان", font=("Vazirmatn", 12, "bold"))
         paste_l.pack(fill="both", expand=True)
 
         text_p_h = """.می باشد که متن رونوشت گرفته شده را در مکان موردنظر شما می چسباند Paste این گزینه معادل"""
 
         Label(paste_l, bg="#EEEEE9", fg="black", font=("Vazirmatn", 10), justify="center", text=text_p_h).pack(fill="both", expand=True)
 
-        delete_l = LabelFrame(edit_h, bg="#EEEEE9", text="بستن", font=("Vazirmatn bold", 12))
+        delete_l = LabelFrame(edit_h, bg="#EEEEE9", text="بستن", font=("Vazirmatn", 12, "bold"))
         delete_l.pack(fill="both", expand=True)
 
         text_d_h = """.می باشد که متن مورد نظر خود را انتخاب و با این گزینه آن قسمت متن حذف می شود Delete این گزینه معادل"""
@@ -397,7 +397,7 @@ def open_texte_page(pre_page):
         help_page.mainloop()
         
 
-    help_b = Button(menubar, text="راهنما", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn bold", 13), bd=0, command=open_help)
+    help_b = Button(menubar, text="راهنما", fg="#EEEEEE", bg="#00ADB5", font=("Vazirmatn", 13, "bold"), bd=0, command=open_help)
     help_b.place(x=310, y=0)
 
 

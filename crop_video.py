@@ -57,7 +57,7 @@ def open_crop_v_page(pre_page):
         from merge_video import open_merge_v_page
         open_merge_v_page(crop_v)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn bold", 15)).place(x=0, y=0)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
     Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
     Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
     Button(hamburgar_menu, text="تغییر پسوند", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=format_v).place(x=0, y=65)
@@ -67,7 +67,7 @@ def open_crop_v_page(pre_page):
 
     # title and img
     Label(crop_v, image=img, bg="light blue").place(x=150, y=0)
-    Label(crop_v, text="برش ویدئو", bg="light blue", justify="center", font=("Vazirmatn bold", 35)).place(x=325, y=0)
+    Label(crop_v, text="برش ویدئو", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=325, y=0)
 
     # categories
 
@@ -83,14 +83,14 @@ def open_crop_v_page(pre_page):
 
         v = Video(vid_p, path)
 
-        Label(vid_p, text="شروع و پایان برش(ثانیه)", bg="light blue", font=("Vazirmatn bold", 14)).pack(pady=30)
+        Label(vid_p, text="شروع و پایان برش(ثانیه)", bg="light blue", font=("Vazirmatn", 14, "bold")).pack(pady=30)
 
         start = IntVar(value=0)
-        start_b = Spinbox(vid_p, font=("Vazirmatn bold", 15), textvariable=start, from_=0, to=v.vid_player.duration(), wrap=True)
+        start_b = Spinbox(vid_p, font=("Vazirmatn", 15, "bold"), textvariable=start, from_=0, to=v.vid_player.duration(), wrap=True)
         start_b.pack()
 
         end = IntVar(value=v.vid_player.duration())
-        end_b = Spinbox(vid_p, font=("Vazirmatn bold", 15), textvariable=end, from_=0, to=v.vid_player.duration(), wrap=True)
+        end_b = Spinbox(vid_p, font=("Vazirmatn", 15, "bold"), textvariable=end, from_=0, to=v.vid_player.duration(), wrap=True)
         end_b.pack()
         
         def end_set(e):
@@ -141,7 +141,7 @@ def open_crop_v_page(pre_page):
             except:
                 messagebox.showerror("خطا در ذخیره کردن ویدئو", "مقادیر وارد شده اشتباه می باشند")
 
-        Button(vid_p, text="انجام", bg="light blue", font=("Vazirmatn bold", 15), command=crop).pack()
+        Button(vid_p, text="انجام", bg="light blue", font=("Vazirmatn", 15, "bold"), command=crop).pack()
 
         vid_p.mainloop()
 
@@ -154,6 +154,6 @@ def open_crop_v_page(pre_page):
        
     select = PhotoImage(file="files/images/image/select_image.png")
     Button(cadr, image=select, bg="light blue", bd=0, activebackground="light blue", command=open_vid).place(x=150, y=0)
-    Button(cadr, text="انتخاب ویدئو", bg="light blue", font=("Vazirmatn bold", 17), bd=0, activebackground="light blue", command=open_vid).place(x=185, y=200)
+    Button(cadr, text="انتخاب ویدئو", bg="light blue", font=("Vazirmatn", 17, "bold"), bd=0, activebackground="light blue", command=open_vid).place(x=185, y=200)
 
     crop_v.mainloop()

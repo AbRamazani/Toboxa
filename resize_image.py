@@ -60,7 +60,7 @@ def open_resize_i_page(pre_page):
         from filter_image import open_filter_i_page
         open_filter_i_page(resize_i)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn bold", 15)).place(x=0, y=0)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
     Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
     Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
     Button(hamburgar_menu, text="بُرش تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=crop_i).place(x=0, y=65)
@@ -71,7 +71,7 @@ def open_resize_i_page(pre_page):
 
     # title and img
     Label(resize_i, image=img, bg="light blue").place(x=150, y=0)
-    Label(resize_i, text="تغییر اندازه", bg="light blue", justify="center", font=("Vazirmatn bold", 35)).place(x=350, y=0)
+    Label(resize_i, text="تغییر اندازه", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=350, y=0)
 
     # categories
 
@@ -121,16 +121,16 @@ def open_resize_i_page(pre_page):
                 nes = int(photo1.height()) / int(photo1.width())
                 w_value.set(round(h/nes))
 
-        Label(img_p, text="عرض", bg="light blue", font=("Vazirmatn bold", 14)).pack()
+        Label(img_p, text="عرض", bg="light blue", font=("Vazirmatn", 14, "bold")).pack()
 
         w_value = IntVar(value=int(photo.width))
-        width = Spinbox(img_p, font=("Vazirmatn bold", 15), textvariable=w_value, from_=1, to=999999999999, wrap=True, command=set_proportional_h)
+        width = Spinbox(img_p, font=("Vazirmatn", 15, "bold"), textvariable=w_value, from_=1, to=999999999999, wrap=True, command=set_proportional_h)
         width.pack()
 
-        Label(img_p, text="ارتفاع", bg="light blue", font=("Vazirmatn bold", 14)).pack()
+        Label(img_p, text="ارتفاع", bg="light blue", font=("Vazirmatn", 14, "bold")).pack()
 
         h_value = IntVar(value=int(photo.height))
-        height = Spinbox(img_p, font=("Vazirmatn bold", 15), textvariable=h_value, from_=1, to=999999999999, wrap=True, command=set_proportional_w)
+        height = Spinbox(img_p, font=("Vazirmatn", 15, "bold"), textvariable=h_value, from_=1, to=999999999999, wrap=True, command=set_proportional_w)
         height.pack()
 
         def set_proportional_h_b(e):
@@ -169,7 +169,7 @@ def open_resize_i_page(pre_page):
         height.bind("<Key>", set_proportional_w_b)
 
         proportional = IntVar()
-        proportional_check = Checkbutton(img_p, text="حفظ تناسب ابعاد", variable=proportional, bg="light blue", font=("Vazirmatn bold", 15))
+        proportional_check = Checkbutton(img_p, text="حفظ تناسب ابعاد", variable=proportional, bg="light blue", font=("Vazirmatn", 15, "bold"))
         proportional_check.pack()
 
         def resize():
@@ -186,7 +186,7 @@ def open_resize_i_page(pre_page):
                 img_p.destroy()
                 messagebox.showinfo("ذخیره کردن تصویر", ".تصویر با موفقیت ذخیره شد")
 
-        s_b = Button(img_p, text="انجام", bg="light blue", font=("Vazirmatn bold", 12), command=resize).pack(pady=7)
+        s_b = Button(img_p, text="انجام", bg="light blue", font=("Vazirmatn", 12, "bold"), command=resize).pack(pady=7)
 
         img_p.mainloop()
 
@@ -199,6 +199,6 @@ def open_resize_i_page(pre_page):
     
     select = PhotoImage(file="files/images/image/select_image.png")
     Button(cadr, image=select, bg="light blue", command=open_img, bd=0, activebackground="light blue").place(x=150, y=0)
-    Button(cadr, text="انتخاب تصویر", bg="light blue", font=("Vazirmatn bold", 17), command=open_img, bd=0, activebackground="light blue").place(x=185, y=200)
+    Button(cadr, text="انتخاب تصویر", bg="light blue", font=("Vazirmatn", 17, "bold"), command=open_img, bd=0, activebackground="light blue").place(x=185, y=200)
 
     resize_i.mainloop()

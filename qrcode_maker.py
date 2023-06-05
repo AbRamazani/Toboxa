@@ -98,7 +98,7 @@ def open_qrcode_maker_page(pre_page):
         from password_maker import open_password_maker_page
         open_password_maker_page(qrcode_maker)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn bold", 15)).place(x=0, y=0)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
     Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
     Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
     Button(hamburgar_menu, text="تایمر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=timer).place(x=0, y=65)
@@ -109,7 +109,7 @@ def open_qrcode_maker_page(pre_page):
 
     # title and img
     Label(qrcode_maker, image=img, bg="light blue").place(x=150, y=0)
-    Label(qrcode_maker, text="QR code تولیدکننده", bg="light blue", justify="center", font=("Vazirmatn bold", 30)).place(x=305, y=15)
+    Label(qrcode_maker, text="QR code تولیدکننده", bg="light blue", justify="center", font=("Vazirmatn", 30, "bold")).place(x=305, y=15)
 
     # categories
 
@@ -138,16 +138,16 @@ def open_qrcode_maker_page(pre_page):
                 qr.svg(file_name_out.name, scale = 8)
             messagebox.showinfo("ذخیره کردن تصویر", ".تصویر با موفقیت ذخیره شد")
 
-    text_qr = Text(cadr, font=("Vazirmatn bold", 13), width=42, bg="light yellow")
+    text_qr = Text(cadr, font=("Vazirmatn", 13, "bold"), width=42, bg="light yellow")
     text_qr.place(x=35, y=5, height=100)    
     scroll = Scrollbar(cadr, command=text_qr.yview, orient='vertical')
     scroll.place(x=20, y=6, height=100)
     text_qr["yscrollcommand"] = scroll.set
 
-    Button(cadr, text="بساز", bg="light blue", font=("Vazirmatn bold", 15), width=35, command=make_qrcode).place(x=50, y=110)
+    Button(cadr, text="بساز", bg="light blue", font=("Vazirmatn", 15, "bold"), width=35, command=make_qrcode).place(x=50, y=110)
 
     f_s = VerticalScrolledFrame(cadr)
-    img_lbl = Label(f_s.interior, bg="light blue", font=("Vazirmatn bold", 13))
+    img_lbl = Label(f_s.interior, bg="light blue", font=("Vazirmatn", 13, "bold"))
     img_lbl.pack()
 
     save = Button(cadr, text="ذخیره", bg="light blue", font=("Vazirmatn", 14), width=35, command=save_qrcode)

@@ -239,7 +239,7 @@ def home():
             about_mak += 1
             root.after(5, open_about)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn bold", 15)).place(x=0, y=0)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
     Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
     Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_home).place(x=0, y=30)
     Button(hamburgar_menu, text="ریاضی", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_math).place(x=0, y=65)
@@ -252,44 +252,44 @@ def home():
 
     # title and img
     Label(root, image=img, bg="light blue").place(x=150, y=0)
-    Label(root, text="توبوکسا", bg="light blue", justify="center", font=("Vazirmatn bold", 50)).place(x=375, y=0)
-    Label(root, text="جعبه ابزاری برای رایانه شما", bg="light blue", fg="#404040", justify="center", font=("Vazirmatn bold", 17)).place(x=360, y=100)
+    Label(root, text="توبوکسا", bg="light blue", justify="center", font=("Vazirmatn", 50, "bold")).place(x=375, y=0)
+    Label(root, text="جعبه ابزاری برای رایانه شما", bg="light blue", fg="#404040", justify="center", font=("Vazirmatn", 17, "bold")).place(x=360, y=100)
 
     # categories
 
     cadr = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
     cadr.place(x=150, y=200)
 
-    categories_title = Label(cadr, text="دسته بندی ها", bg="light blue", justify="center", font=("Vazirmatn bold", 20)).place(x=175, y=0)
+    categories_title = Label(cadr, text="دسته بندی ها", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=175, y=0)
 
     math_img = PhotoImage(file="files/images/root/math_icon.png")
     math = Button(cadr, image=math_img, bg="light blue", bd=0, activebackground="light blue", command=open_math)
-    math_title = Button(cadr, text="ریاضی", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=open_math)
+    math_title = Button(cadr, text="ریاضی", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=open_math)
     math.place(x=340, y=50)
     math_title.place(x=370, y=170)
 
     programming_img = PhotoImage(file="files/images/root/programming_icon.png")
     programming = Button(cadr, image=programming_img, bg="light blue", bd=0, activebackground="light blue", command=open_programming)
-    programming_title = Button(cadr, text="برنامه نویسی", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=open_programming)
+    programming_title = Button(cadr, text="برنامه نویسی", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=open_programming)
     programming.place(x=170, y=55)
     programming_title.place(x=180, y=170)
 
 
     image_img = PhotoImage(file="files/images/root/image_icon.png")
     image = Button(cadr, image=image_img, bg="light blue", bd=0, activebackground="light blue", command=open_image)
-    image_title = Button(cadr, text="تصویر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=open_image)
+    image_title = Button(cadr, text="تصویر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=open_image)
     image.place(x=0, y=45)
     image_title.place(x=35, y=170)
 
     video_img = PhotoImage(file="files/images/root/video_icon.png")
     video = Button(cadr, image=video_img, bg="light blue", bd=0, activebackground="light blue", command=open_video)
-    video_title = Button(cadr, text="ویدئو", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=open_video)
+    video_title = Button(cadr, text="ویدئو", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=open_video)
     video.place(x=338, y=210)
     video_title.place(x=380, y=330)
 
     other_img = PhotoImage(file="files/images/root/other_icon.png")
     other = Button(cadr, image=other_img, bg="light blue", bd=0, activebackground="light blue", command=open_other)
-    other_title = Button(cadr, text="سایر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=open_other)
+    other_title = Button(cadr, text="سایر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=open_other)
     other.place(x=170, y=220)
     other_title.place(x=190, y=330)
 
@@ -298,162 +298,162 @@ def home():
 
     # math parts:
     math_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
-    math_page_title = Label(math_page, text="ابزار های ریاضی", bg="light blue", justify="center", font=("Vazirmatn bold", 20)).place(x=165, y=0)
+    math_page_title = Label(math_page, text="ابزار های ریاضی", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=165, y=0)
     Button(math_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
 
     perimete_img = PhotoImage(file="files/images/math/select_icon.png")
     perimete = Button(math_page, image=perimete_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_area_page(root))
-    perimete_title = Button(math_page, text="محاسبه مساحت", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_area_page(root))
+    perimete_title = Button(math_page, text="محاسبه مساحت", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_area_page(root))
     perimete.place(x=340, y=50)
     perimete_title.place(x=340, y=170)
 
     date_img = PhotoImage(file="files/images/math/schedule_icon.png")
     date = Button(math_page, image=date_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_date_page(root))
-    date_title = Button(math_page, text="تبدیل تاریخ", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_date_page(root))
+    date_title = Button(math_page, text="تبدیل تاریخ", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_date_page(root))
     date.place(x=170, y=50)
     date_title.place(x=185, y=170)
 
     calculator_img = PhotoImage(file="files/images/math/calculator_icon.png")
     calculator = Button(math_page, image=calculator_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_calculator_page(root))
-    calculator_title = Button(math_page, text="ماشین حساب", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_calculator_page(root))
+    calculator_title = Button(math_page, text="ماشین حساب", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_calculator_page(root))
     calculator.place(x=0, y=50)
     calculator_title.place(x=14, y=170)
 
     unit_math_img = PhotoImage(file="files/images/math/cost_icon.png")
     unit_math = Button(math_page, image=unit_math_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_unit_math_page(root))
-    unit_math_title = Button(math_page, text="مبدل واحد", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_unit_math_page(root))
+    unit_math_title = Button(math_page, text="مبدل واحد", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_unit_math_page(root))
     unit_math.place(x=338, y=210)
     unit_math_title.place(x=360, y=330)
 
     # programming parts:
     programming_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
-    programming_page_title = Label(programming_page, text="ابزار های برنامه نویسی", bg="light blue", justify="center", font=("Vazirmatn bold", 20)).place(x=127, y=0)
+    programming_page_title = Label(programming_page, text="ابزار های برنامه نویسی", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=127, y=0)
     Button(programming_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
 
     lorem_img = PhotoImage(file="files/images/programming/publishing_icon.png")
     lorem = Button(programming_page, image=lorem_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_lorem_page(root))
-    lorem_title = Button(programming_page, text="لورم ساز", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_lorem_page(root))
+    lorem_title = Button(programming_page, text="لورم ساز", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_lorem_page(root))
     lorem.place(x=340, y=50)
     lorem_title.place(x=363, y=180)
 
     compress_img = PhotoImage(file="files/images/programming/compression_icon.png")
     compress = Button(programming_page, image=compress_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_compress_page(root))
-    compress_title = Button(programming_page, text="فشرده‌سازی‌فایل‌‌وب", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_compress_page(root))
+    compress_title = Button(programming_page, text="فشرده‌سازی‌فایل‌‌وب", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_compress_page(root))
     compress.place(x=170, y=50)
     compress_title.place(x=150, y=180)
 
     text_editor_img = PhotoImage(file="files/images/programming/text-editor_icon.png")
     text_editor = Button(programming_page, image=text_editor_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_texte_page(root))
-    text_editor_title = Button(programming_page, text="ویرایشگر متن", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_texte_page(root))
+    text_editor_title = Button(programming_page, text="ویرایشگر متن", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_texte_page(root))
     text_editor.place(x=5, y=50)
     text_editor_title.place(x=10, y=180)
 
     # image parts:
     image_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
-    image_page_title = Label(image_page, text="ابزار های تصویر", bg="light blue", justify="center", font=("Vazirmatn bold", 20)).place(x=165, y=0)
+    image_page_title = Label(image_page, text="ابزار های تصویر", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=165, y=0)
     Button(image_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
 
     crop_i_img = PhotoImage(file="files/images/image/crop_icon.png")
     crop_i = Button(image_page, image=crop_i_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_crop_i_page(root))
-    crop_i_title = Button(image_page, text="برش", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_crop_i_page(root))
+    crop_i_title = Button(image_page, text="برش", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_crop_i_page(root))
     crop_i.place(x=340, y=50)
     crop_i_title.place(x=375, y=170)
 
     resize_i_img = PhotoImage(file="files/images/image/resizing_icon.png")
     resize_i = Button(image_page, image=resize_i_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_resize_i_page(root))
-    resize_i_title = Button(image_page, text="تغییر اندازه", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_resize_i_page(root))
+    resize_i_title = Button(image_page, text="تغییر اندازه", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_resize_i_page(root))
     resize_i.place(x=170, y=50)
     resize_i_title.place(x=185, y=170)
 
     foramt_i_img = PhotoImage(file="files/images/image/format-image_icon.png")
     foramt_i = Button(image_page, image=foramt_i_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_format_i_page(root))
-    foramt_i_title = Button(image_page, text="تغییر پسوند", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_format_i_page(root))
+    foramt_i_title = Button(image_page, text="تغییر پسوند", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_format_i_page(root))
     foramt_i.place(x=0, y=50)
     foramt_i_title.place(x=14, y=170)
 
     rotate_i_img = PhotoImage(file="files/images/image/rotation_icon.png")
     rotate_i = Button(image_page, image=rotate_i_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_rotate_i_page(root))
-    rotate_i_title = Button(image_page, text="چرخاندن", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_rotate_i_page(root))
+    rotate_i_title = Button(image_page, text="چرخاندن", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_rotate_i_page(root))
     rotate_i.place(x=338, y=210)
     rotate_i_title.place(x=365, y=330)
 
     filter_i_img = PhotoImage(file="files/images/image/filter-image_icon.png")
     filter_i = Button(image_page, image=filter_i_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_filter_i_page(root))
-    filter_i_title = Button(image_page, text="قراردادن فیلتر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_filter_i_page(root))
+    filter_i_title = Button(image_page, text="قراردادن فیلتر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_filter_i_page(root))
     filter_i.place(x=175, y=210)
     filter_i_title.place(x=185, y=330)
 
     # video parts:
     video_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
-    video_page_title = Label(video_page, text="ابزار های ویدئو", bg="light blue", justify="center", font=("Vazirmatn bold", 20)).place(x=175, y=0)
+    video_page_title = Label(video_page, text="ابزار های ویدئو", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=175, y=0)
     Button(video_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
 
     crop_v_img = PhotoImage(file="files/images/video/crop_icon.png")
     crop_v = Button(video_page, image=crop_v_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_crop_v_page(root))
-    crop_v_title = Button(video_page, text="برش", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_crop_v_page(root))
+    crop_v_title = Button(video_page, text="برش", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_crop_v_page(root))
     crop_v.place(x=340, y=50)
     crop_v_title.place(x=375, y=170)
 
     foramt_v_img = PhotoImage(file="files/images/video/format-film_icon.png")
     foramt_v = Button(video_page, image=foramt_v_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_format_v_page(root))
-    foramt_v_title = Button(video_page, text="تغییر پسوند", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_format_v_page(root))
+    foramt_v_title = Button(video_page, text="تغییر پسوند", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_format_v_page(root))
     foramt_v.place(x=170, y=50)
     foramt_v_title.place(x=185, y=170)
 
     rotate_v_img = PhotoImage(file="files/images/video/rotation_icon.png")
     rotate_v = Button(video_page, image=rotate_v_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_rotate_v_page(root))
-    rotate_v_title = Button(video_page, text="چرخاندن", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_rotate_v_page(root))
+    rotate_v_title = Button(video_page, text="چرخاندن", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_rotate_v_page(root))
     rotate_v.place(x=0, y=40)
     rotate_v_title.place(x=16, y=170)
 
     paste_v_img = PhotoImage(file="files/images/video/paste-video_icon.png")
     paste_v = Button(video_page, image=paste_v_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_merge_v_page(root))
-    paste_v_title = Button(video_page, text="ادغام ویدئوها", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_merge_v_page(root))
+    paste_v_title = Button(video_page, text="ادغام ویدئوها", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_merge_v_page(root))
     paste_v.place(x=338, y=210)
     paste_v_title.place(x=345, y=330)
 
     # other parts:
     other_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
-    other_page_title = Label(other_page, text="سایر ابزار ها", bg="light blue", justify="center", font=("Vazirmatn bold", 20)).place(x=175, y=0)
+    other_page_title = Label(other_page, text="سایر ابزار ها", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=175, y=0)
     Button(other_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
 
     timer_img = PhotoImage(file="files/images/other/timer_icon.png")
     timer = Button(other_page, image=timer_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_timer_page(root))
-    timer_title = Button(other_page, text="تایمر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_timer_page(root))
+    timer_title = Button(other_page, text="تایمر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_timer_page(root))
     timer.place(x=340, y=50)
     timer_title.place(x=380, y=170)
 
     stopwatch_img = PhotoImage(file="files/images/other/stopwatch_icon.png")
     stopwatch = Button(other_page, image=stopwatch_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_stopwatch_page(root))
-    stopwatch_title = Button(other_page, text="کرنومتر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_stopwatch_page(root))
+    stopwatch_title = Button(other_page, text="کرنومتر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_stopwatch_page(root))
     stopwatch.place(x=170, y=50)
     stopwatch_title.place(x=215, y=170)
 
     speed_img = PhotoImage(file="files/images/other/speed-test_icon.png")
     speed = Button(other_page, image=speed_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_net_speed_page(root))
-    speed_title = Button(other_page, text="سرعت اینترنت", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_net_speed_page(root))
+    speed_title = Button(other_page, text="سرعت اینترنت", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_net_speed_page(root))
     speed.place(x=0, y=50)
     speed_title.place(x=12, y=170)
 
     password_img = PhotoImage(file="files/images/other/password_icon.png")
     password = Button(other_page, image=password_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_password_maker_page(root))
-    password_title = Button(other_page, text="تولید کننده رمز", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_password_maker_page(root))
+    password_title = Button(other_page, text="تولید کننده رمز", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_password_maker_page(root))
     password.place(x=338, y=210)
     password_title.place(x=345, y=330)
 
     qrcode_img = PhotoImage(file="files/images/other/qr-code_icon.png")
     qrcode = Button(other_page, image=qrcode_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_qrcode_maker_page(root))
-    qrcode_title = Button(other_page, text="QRcode تولید کننده", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn bold", 15), command=lambda: open_qrcode_maker_page(root))
+    qrcode_title = Button(other_page, text="QRcode تولید کننده", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_qrcode_maker_page(root))
     qrcode.place(x=175, y=210)
     qrcode_title.place(x=160, y=330)
 
     # about me:
     about_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
-    about_page_title = Label(about_page, text="درباره من", bg="light blue", justify="center", font=("Vazirmatn bold", 20)).place(x=175, y=0)
+    about_page_title = Label(about_page, text="درباره من", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=175, y=0)
     Button(about_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
     
-    Label(about_page, text="ابوالفضل رمضانی متولد سال 1386 از قائن هستم", bg="light blue", justify="center", font=("Vazirmatn bold", 15)).place(x=35, y=50)
-    Label(about_page, text=": راه های تماس", bg="light blue", justify="center", font=("Vazirmatn bold", 15)).place(x=150, y=80)
+    Label(about_page, text="ابوالفضل رمضانی متولد سال 1386 از قائن هستم", bg="light blue", justify="center", font=("Vazirmatn", 15, "bold")).place(x=35, y=50)
+    Label(about_page, text=": راه های تماس", bg="light blue", justify="center", font=("Vazirmatn", 15, "bold")).place(x=150, y=80)
 
     def open_link(link):
         open(link)
@@ -473,7 +473,7 @@ def home():
     email_img = PhotoImage(file="files/images/about_me/gmail.png")
     Button(about_page, image=email_img, bg="light blue", activebackground="light blue", bd=0, command=lambda: open_link("mailto:abolfazlramazani86@gmail.com")).place(x=30, y=110)
     
-    Label(about_page, text=": راهنمای نرم افزار", bg="light blue", justify="center", font=("Vazirmatn bold", 15)).place(x=155, y=180)
+    Label(about_page, text=": راهنمای نرم افزار", bg="light blue", justify="center", font=("Vazirmatn", 15, "bold")).place(x=155, y=180)
 
     guide_qrcode = PhotoImage(file="files/images/about_me/guide-qrcode.png")
     Button(about_page, image=guide_qrcode, bg="light blue", activebackground="light blue", bd=0, command=lambda: open_link("https://drive.google.com/file/d/1sG7rxTAgtvJ8chH-bD6tUwvBNuY6tfxA/view?usp=sharing"), cursor="hand2").place(x=150, y=215)

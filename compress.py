@@ -53,7 +53,7 @@ def open_compress_page(pre_page):
         from text_editor import open_texte_page
         open_texte_page(compress)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn bold", 15)).place(x=0, y=0)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
     Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
     Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
     Button(hamburgar_menu, text="لورم ساز", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=lorem).place(x=0, y=65)
@@ -62,7 +62,7 @@ def open_compress_page(pre_page):
 
     # title and img
     Label(compress, image=img, bg="light blue").place(x=150, y=0)
-    Label(compress, text="فشره‌سازی‌فایل‌های‌وب", bg="light blue", justify="center", font=("Vazirmatn bold", 27)).place(x=300, y=25)
+    Label(compress, text="فشره‌سازی‌فایل‌های‌وب", bg="light blue", justify="center", font=("Vazirmatn", 27, "bold")).place(x=300, y=25)
 
     # categories
 
@@ -210,7 +210,7 @@ def open_compress_page(pre_page):
         reset.place(x=219, y=400)
 
 
-    Button(cadr, text="بازکردن یک فایل", font=("Vazirmatn bold", 13), bg="light blue", command=open_file).place(x=35, y=0)
+    Button(cadr, text="بازکردن یک فایل", font=("Vazirmatn", 13, "bold"), bg="light blue", command=open_file).place(x=35, y=0)
 
     input_text = Text(cadr, font=("Vazirmatn", 10), width=28, height=18, undo=True, wrap=WORD)
     input_text.place(x=0, y=50)
@@ -218,15 +218,15 @@ def open_compress_page(pre_page):
     scroll1.place(x=200, y=50, height=382)
     input_text.configure(yscrollcommand=scroll1.set)
 
-    html = Button(cadr, text="فشرده\nسازی\nHTML", font=("Vazirmatn bold", 10), bg="light blue", command=compress_html)
+    html = Button(cadr, text="فشرده\nسازی\nHTML", font=("Vazirmatn", 10, "bold"), bg="light blue", command=compress_html)
     html.place(x=218, y=100)
-    css = Button(cadr, text="فشرده\nسازی\nCSS", font=("Vazirmatn bold", 10), bg="light blue", command=compress_css)
+    css = Button(cadr, text="فشرده\nسازی\nCSS", font=("Vazirmatn", 10, "bold"), bg="light blue", command=compress_css)
     css.place(x=218, y=200)
-    js = Button(cadr, text="فشرده\nسازی\nJS", font=("Vazirmatn bold", 10), bg="light blue", command=compress_js)
+    js = Button(cadr, text="فشرده\nسازی\nJS", font=("Vazirmatn", 10, "bold"), bg="light blue", command=compress_js)
     js.place(x=218, y=300)
-    reset = Button(cadr, text="بازنشانی", font=("Vazirmatn bold", 8), bg="light blue", command=reset_data)
+    reset = Button(cadr, text="بازنشانی", font=("Vazirmatn", 8, "bold"), bg="light blue", command=reset_data)
     
-    Button(cadr, text="ذخیره کردن خروجی", font=("Vazirmatn bold", 13), bg="light blue", command=save_text).place(x=300, y=0)
+    Button(cadr, text="ذخیره کردن خروجی", font=("Vazirmatn", 13, "bold"), bg="light blue", command=save_text).place(x=300, y=0)
 
     output_text = Text(cadr, font=("Vazirmatn", 10), width=28, height=18, undo=True, wrap=WORD)
     output_text.place(x=265, y=50)
@@ -241,6 +241,6 @@ def open_compress_page(pre_page):
         copy(text)
         messagebox.showinfo("کپی", "متن کپی شد")       
 
-    copy_b = Button(cadr, text="کپی کردن خروجی", font=("Vazirmatn bold", 9), bg="light blue", command=copy_text)
+    copy_b = Button(cadr, text="کپی کردن خروجی", font=("Vazirmatn", 9, "bold"), bg="light blue", command=copy_text)
     
     compress.mainloop()

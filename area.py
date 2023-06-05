@@ -62,7 +62,7 @@ def open_area_page(pre_page):
         from unit_math import open_unit_math_page
         open_unit_math_page(area)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn bold", 15)).place(x=0, y=0)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
     Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
     Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
     Button(hamburgar_menu, text="تبدیل تاریخ", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=date).place(x=0, y=65)
@@ -72,7 +72,7 @@ def open_area_page(pre_page):
 
     # title and img
     Label(area, image=img, bg="light blue").place(x=150, y=0)
-    Label(area, text="محاسبه مساحت", bg="light blue", justify="center", font=("Vazirmatn bold", 35)).place(x=300, y=0)
+    Label(area, text="محاسبه مساحت", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=300, y=0)
 
     # categories
 
@@ -88,11 +88,11 @@ def open_area_page(pre_page):
         Label(rectangle, image=rectangle_img, bg="light blue").pack()
 
         # sides:
-        Label(rectangle, text=":a ضلع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_a = Entry(rectangle, font=("Vazirmatn bold", 10))
+        Label(rectangle, text=":a ضلع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_a = Entry(rectangle, font=("Vazirmatn", 10, "bold"))
         side_a.pack()
-        Label(rectangle, text=":b ضلع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_b = Entry(rectangle, font=("Vazirmatn bold", 10))
+        Label(rectangle, text=":b ضلع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_b = Entry(rectangle, font=("Vazirmatn", 10, "bold"))
         side_b.pack()
 
         def comp():
@@ -109,9 +109,9 @@ def open_area_page(pre_page):
             else:
                     messagebox.showerror("خطا", "لطفا عدد وارد کنید")            
 
-        Button(rectangle, text="محاسبه کن", bg="light blue", font=("Vazirmatn bold", 15), command=comp).pack(pady=20)
+        Button(rectangle, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 15, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(rectangle, bg="light blue", font=("Vazirmatn bold", 15))
+        finall_show = Label(rectangle, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
         rectangle.mainloop()
@@ -125,8 +125,8 @@ def open_area_page(pre_page):
         Label(square, image=square_img, bg="light blue").pack()
 
         # sides:
-        Label(square, text=":a ضلع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_a = Entry(square, font=("Vazirmatn bold", 10))
+        Label(square, text=":a ضلع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_a = Entry(square, font=("Vazirmatn", 10, "bold"))
         side_a.pack()
 
         def comp():
@@ -138,9 +138,9 @@ def open_area_page(pre_page):
             else:
                 messagebox.showerror("خطا", "لطفا عدد وارد کنید")   
 
-        Button(square, text="محاسبه کن", bg="light blue", font=("Vazirmatn bold", 15), command=comp).pack(pady=20)
+        Button(square, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 15, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(square, bg="light blue", font=("Vazirmatn bold", 15))
+        finall_show = Label(square, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
         square.mainloop()
@@ -154,11 +154,11 @@ def open_area_page(pre_page):
         Label(parallelogram, image=parallelogram_img, bg="light blue").pack()
 
         # sides:
-        Label(parallelogram, text=":a ضلع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_a = Entry(parallelogram, font=("Vazirmatn bold", 10))
+        Label(parallelogram, text=":a ضلع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_a = Entry(parallelogram, font=("Vazirmatn", 10, "bold"))
         side_a.pack()
-        Label(parallelogram, text=":h ارتفاع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_b = Entry(parallelogram, font=("Vazirmatn bold", 10))
+        Label(parallelogram, text=":h ارتفاع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_b = Entry(parallelogram, font=("Vazirmatn", 10, "bold"))
         side_b.pack()
 
         def comp():
@@ -175,9 +175,9 @@ def open_area_page(pre_page):
             else:
                     messagebox.showerror("خطا", "لطفا عدد وارد کنید")            
 
-        Button(parallelogram, text="محاسبه کن", bg="light blue", font=("Vazirmatn bold", 15), command=comp).pack(pady=20)
+        Button(parallelogram, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 15, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(parallelogram, bg="light blue", font=("Vazirmatn bold", 15))
+        finall_show = Label(parallelogram, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
         parallelogram.mainloop()
@@ -191,11 +191,11 @@ def open_area_page(pre_page):
         Label(rhombus, image=rhombus_img, bg="light blue").pack()
 
         # sides:
-        Label(rhombus, text=":k1 قطر", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_a = Entry(rhombus, font=("Vazirmatn bold", 10))
+        Label(rhombus, text=":k1 قطر", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_a = Entry(rhombus, font=("Vazirmatn", 10, "bold"))
         side_a.pack()
-        Label(rhombus, text=":k2 قطر", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_b = Entry(rhombus, font=("Vazirmatn bold", 10))
+        Label(rhombus, text=":k2 قطر", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_b = Entry(rhombus, font=("Vazirmatn", 10, "bold"))
         side_b.pack()
 
         def comp():
@@ -212,9 +212,9 @@ def open_area_page(pre_page):
             else:
                     messagebox.showerror("خطا", "لطفا عدد وارد کنید")            
 
-        Button(rhombus, text="محاسبه کن", bg="light blue", font=("Vazirmatn bold", 15), command=comp).pack(pady=20)
+        Button(rhombus, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 15, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(rhombus, bg="light blue", font=("Vazirmatn bold", 15))
+        finall_show = Label(rhombus, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
         rhombus.mainloop()
@@ -228,11 +228,11 @@ def open_area_page(pre_page):
         Label(triangle, image=triangle_img, bg="light blue").pack()
 
         # sides:
-        Label(triangle, text=":a ضلع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_a = Entry(triangle, font=("Vazirmatn bold", 10))
+        Label(triangle, text=":a ضلع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_a = Entry(triangle, font=("Vazirmatn", 10, "bold"))
         side_a.pack()
-        Label(triangle, text=":h ارتفاع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_b = Entry(triangle, font=("Vazirmatn bold", 10))
+        Label(triangle, text=":h ارتفاع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_b = Entry(triangle, font=("Vazirmatn", 10, "bold"))
         side_b.pack()
 
         def comp():
@@ -249,9 +249,9 @@ def open_area_page(pre_page):
             else:
                     messagebox.showerror("خطا", "لطفا عدد وارد کنید")            
 
-        Button(triangle, text="محاسبه کن", bg="light blue", font=("Vazirmatn bold", 15), command=comp).pack(pady=20)
+        Button(triangle, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 15, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(triangle, bg="light blue", font=("Vazirmatn bold", 15))
+        finall_show = Label(triangle, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
         triangle.mainloop()
@@ -265,14 +265,14 @@ def open_area_page(pre_page):
         Label(trapezoid, image=trapezoid_img, bg="light blue").pack()
 
         # sides:
-        Label(trapezoid, text=":c ضلع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_a = Entry(trapezoid, font=("Vazirmatn bold", 10))
+        Label(trapezoid, text=":c ضلع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_a = Entry(trapezoid, font=("Vazirmatn", 10, "bold"))
         side_a.pack()
-        Label(trapezoid, text=":a ضلع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_b = Entry(trapezoid, font=("Vazirmatn bold", 10))
+        Label(trapezoid, text=":a ضلع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_b = Entry(trapezoid, font=("Vazirmatn", 10, "bold"))
         side_b.pack()
-        Label(trapezoid, text=":h ارتفاع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_h = Entry(trapezoid, font=("Vazirmatn bold", 10))
+        Label(trapezoid, text=":h ارتفاع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_h = Entry(trapezoid, font=("Vazirmatn", 10, "bold"))
         side_h.pack()
 
         def comp():
@@ -294,9 +294,9 @@ def open_area_page(pre_page):
             else:
                     messagebox.showerror("خطا", "لطفا عدد وارد کنید")            
 
-        Button(trapezoid, text="محاسبه کن", bg="light blue", font=("Vazirmatn bold", 15), command=comp).pack(pady=20)
+        Button(trapezoid, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 15, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(trapezoid, bg="light blue", font=("Vazirmatn bold", 15))
+        finall_show = Label(trapezoid, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
         trapezoid.mainloop()
@@ -310,8 +310,8 @@ def open_area_page(pre_page):
         Label(pentagon, image=pentagon_img, bg="light blue").pack()
 
         # sides:
-        Label(pentagon, text=":a ضلع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_a = Entry(pentagon, font=("Vazirmatn bold", 10))
+        Label(pentagon, text=":a ضلع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_a = Entry(pentagon, font=("Vazirmatn", 10, "bold"))
         side_a.pack()
 
         def comp():
@@ -323,9 +323,9 @@ def open_area_page(pre_page):
             else:
                 messagebox.showerror("خطا", "لطفا عدد وارد کنید")   
 
-        Button(pentagon, text="محاسبه کن", bg="light blue", font=("Vazirmatn bold", 15), command=comp).pack(pady=20)
+        Button(pentagon, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 15, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(pentagon, bg="light blue", font=("Vazirmatn bold", 15))
+        finall_show = Label(pentagon, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
         pentagon.mainloop()
@@ -339,8 +339,8 @@ def open_area_page(pre_page):
         Label(hexagon, image=hexagon_img, bg="light blue").pack()
 
         # sides:
-        Label(hexagon, text=":a ضلع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_a = Entry(hexagon, font=("Vazirmatn bold", 10))
+        Label(hexagon, text=":a ضلع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_a = Entry(hexagon, font=("Vazirmatn", 10, "bold"))
         side_a.pack()
 
         def comp():
@@ -352,9 +352,9 @@ def open_area_page(pre_page):
             else:
                 messagebox.showerror("خطا", "لطفا عدد وارد کنید")   
 
-        Button(hexagon, text="محاسبه کن", bg="light blue", font=("Vazirmatn bold", 15), command=comp).pack(pady=20)
+        Button(hexagon, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 15, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(hexagon, bg="light blue", font=("Vazirmatn bold", 15))
+        finall_show = Label(hexagon, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
         hexagon.mainloop()
@@ -368,8 +368,8 @@ def open_area_page(pre_page):
         Label(octagon, image=octagon_img, bg="light blue").pack()
 
         # sides:
-        Label(octagon, text=":a ضلع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_a = Entry(octagon, font=("Vazirmatn bold", 10))
+        Label(octagon, text=":a ضلع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_a = Entry(octagon, font=("Vazirmatn", 10, "bold"))
         side_a.pack()
 
         def comp():
@@ -381,9 +381,9 @@ def open_area_page(pre_page):
             else:
                 messagebox.showerror("خطا", "لطفا عدد وارد کنید")   
 
-        Button(octagon, text="محاسبه کن", bg="light blue", font=("Vazirmatn bold", 15), command=comp).pack(pady=20)
+        Button(octagon, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 15, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(octagon, bg="light blue", font=("Vazirmatn bold", 15))
+        finall_show = Label(octagon, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
         octagon.mainloop()
@@ -397,8 +397,8 @@ def open_area_page(pre_page):
         Label(circle, image=circle_img, bg="light blue").pack()
 
         # sides:
-        Label(circle, text=":a شعاع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_a = Entry(circle, font=("Vazirmatn bold", 10))
+        Label(circle, text=":a شعاع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_a = Entry(circle, font=("Vazirmatn", 10, "bold"))
         side_a.pack()
 
         def comp():
@@ -410,9 +410,9 @@ def open_area_page(pre_page):
             else:
                 messagebox.showerror("خطا", "لطفا عدد وارد کنید")   
 
-        Button(circle, text="محاسبه کن", bg="light blue", font=("Vazirmatn bold", 15), command=comp).pack(pady=20)
+        Button(circle, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 15, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(circle, bg="light blue", font=("Vazirmatn bold", 15))
+        finall_show = Label(circle, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
         circle.mainloop()
@@ -426,11 +426,11 @@ def open_area_page(pre_page):
         Label(ellipse, image=ellipse_img, bg="light blue").pack()
 
         # sides:
-        Label(ellipse, text=":a ضلع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_a = Entry(ellipse, font=("Vazirmatn bold", 10))
+        Label(ellipse, text=":a ضلع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_a = Entry(ellipse, font=("Vazirmatn", 10, "bold"))
         side_a.pack()
-        Label(ellipse, text=":b ضلع", bg="light blue", font=("Vazirmatn bold", 15)).pack()
-        side_b = Entry(ellipse, font=("Vazirmatn bold", 10))
+        Label(ellipse, text=":b ضلع", bg="light blue", font=("Vazirmatn", 15, "bold")).pack()
+        side_b = Entry(ellipse, font=("Vazirmatn", 10, "bold"))
         side_b.pack()
 
         def comp():
@@ -447,23 +447,23 @@ def open_area_page(pre_page):
             else:
                     messagebox.showerror("خطا", "لطفا عدد وارد کنید")            
 
-        Button(ellipse, text="محاسبه کن", bg="light blue", font=("Vazirmatn bold", 15), command=comp).pack(pady=20)
+        Button(ellipse, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 15, "bold"), command=comp).pack(pady=20)
 
-        finall_show = Label(ellipse, bg="light blue", font=("Vazirmatn bold", 15))
+        finall_show = Label(ellipse, bg="light blue", font=("Vazirmatn", 15, "bold"))
         finall_show.pack()
 
         ellipse.mainloop()
 
-    Button(cadr, text="مستطیل", font=("Vazirmatn bold", 15), bg="light blue", width=13, height=2, command=rectangle_page).place(x=2, y=0)
-    Button(cadr, text="مربع", font=("Vazirmatn bold", 15), bg="light blue", width=13, height=2, command=square_page).place(x=166, y=0)
-    Button(cadr, text="متوازی الاضلاع", font=("Vazirmatn bold", 15), bg="light blue", width=13, height=2, command=parallelogram_page).place(x=330, y=0)
-    Button(cadr, text="لوزی", font=("Vazirmatn bold", 15), bg="light blue", width=13, height=2, command=rhombus_page).place(x=2, y=100)
-    Button(cadr, text="مثلث", font=("Vazirmatn bold", 15), bg="light blue", width=13, height=2, command=triangle_page).place(x=166, y=100)
-    Button(cadr, text="ذوزنقه", font=("Vazirmatn bold", 15), bg="light blue", width=13, height=2, command=trapezoid_page).place(x=330, y=100)
-    Button(cadr, text="پنج ضلعی", font=("Vazirmatn bold", 15), bg="light blue", width=13, height=2, command=pentagon_page).place(x=330, y=200)
-    Button(cadr, text="شش ضلعی", font=("Vazirmatn bold", 15), bg="light blue", width=13, height=2, command=hexagon_page).place(x=166, y=200)
-    Button(cadr, text="هشت ضلعی", font=("Vazirmatn bold", 15), bg="light blue", width=13, height=2, command=octagon_page).place(x=2, y=200)
-    Button(cadr, text="دایره", font=("Vazirmatn bold", 15), bg="light blue", width=13, height=2, command=circle_page).place(x=166, y=300)
-    Button(cadr, text="بیضی", font=("Vazirmatn bold", 15), bg="light blue", width=13, height=2, command=ellipse_page).place(x=330, y=300)
+    Button(cadr, text="مستطیل", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=rectangle_page).place(x=2, y=0)
+    Button(cadr, text="مربع", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=square_page).place(x=166, y=0)
+    Button(cadr, text="متوازی الاضلاع", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=parallelogram_page).place(x=330, y=0)
+    Button(cadr, text="لوزی", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=rhombus_page).place(x=2, y=100)
+    Button(cadr, text="مثلث", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=triangle_page).place(x=166, y=100)
+    Button(cadr, text="ذوزنقه", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=trapezoid_page).place(x=330, y=100)
+    Button(cadr, text="پنج ضلعی", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=pentagon_page).place(x=330, y=200)
+    Button(cadr, text="شش ضلعی", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=hexagon_page).place(x=166, y=200)
+    Button(cadr, text="هشت ضلعی", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=octagon_page).place(x=2, y=200)
+    Button(cadr, text="دایره", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=circle_page).place(x=166, y=300)
+    Button(cadr, text="بیضی", font=("Vazirmatn", 15, "bold"), bg="light blue", width=13, height=2, command=ellipse_page).place(x=330, y=300)
 
     area.mainloop()

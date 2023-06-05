@@ -98,7 +98,7 @@ def open_filter_i_page(pre_page):
         from rotate_image import open_rotate_i_page
         open_rotate_i_page(filter_i)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn bold", 15)).place(x=0, y=0)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
     Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
     Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
     Button(hamburgar_menu, text="بُرش تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=crop_i).place(x=0, y=65)
@@ -109,7 +109,7 @@ def open_filter_i_page(pre_page):
 
     # title and img
     Label(filter_i, image=img, bg="light blue").place(x=150, y=0)
-    Label(filter_i, text="قراردادن فیلتر", bg="light blue", justify="center", font=("Vazirmatn bold", 35)).place(x=325, y=0)
+    Label(filter_i, text="قراردادن فیلتر", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=325, y=0)
 
     # categories
 
@@ -207,7 +207,7 @@ def open_filter_i_page(pre_page):
                 img_p.destroy()
                 messagebox.showinfo("ذخیره کردن تصویر", ".تصویر با موفقیت ذخیره شد")
 
-        render = Button(img_p, text="انجام", bg="light blue", font=("Vazirmatn bold", 15), command=filter_image)
+        render = Button(img_p, text="انجام", bg="light blue", font=("Vazirmatn", 15, "bold"), command=filter_image)
 
         img_p.update()
         filters.canvas.config(width=img_p.winfo_width(), height=100)
@@ -223,6 +223,6 @@ def open_filter_i_page(pre_page):
     
     select = PhotoImage(file="files/images/image/select_image.png")
     Button(cadr, image=select, bg="light blue", command=open_img, bd=0, activebackground="light blue").place(x=150, y=0)
-    Button(cadr, text="انتخاب تصویر", bg="light blue", font=("Vazirmatn bold", 17), command=open_img, bd=0, activebackground="light blue").place(x=185, y=200)
+    Button(cadr, text="انتخاب تصویر", bg="light blue", font=("Vazirmatn", 17, "bold"), command=open_img, bd=0, activebackground="light blue").place(x=185, y=200)
 
     filter_i.mainloop()

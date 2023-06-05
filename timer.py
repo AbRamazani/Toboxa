@@ -59,7 +59,7 @@ def open_timer_page(pre_page):
         from qrcode_maker import open_qrcode_maker_page
         open_qrcode_maker_page(timer)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn bold", 15)).place(x=0, y=0)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
     Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
     Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
     Button(hamburgar_menu, text="کرنومتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=stopwatch).place(x=0, y=65)
@@ -70,7 +70,7 @@ def open_timer_page(pre_page):
 
     # title and img
     Label(timer, image=img, bg="light blue").place(x=150, y=0)
-    Label(timer, text="تایمر", bg="light blue", justify="center", font=("Vazirmatn bold", 35)).place(x=365, y=0)
+    Label(timer, text="تایمر", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=365, y=0)
 
     # categories
 
