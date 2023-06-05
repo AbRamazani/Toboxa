@@ -57,17 +57,17 @@ def open_format_v_page(pre_page):
         from merge_video import open_merge_v_page
         open_merge_v_page(format_v)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir bold", 15)).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="برش ویدئو", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=crop_v).place(x=0, y=65)
-    Button(hamburgar_menu, text="چرخاندن ویدئو", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=rotate_v).place(x=0, y=100)
-    Button(hamburgar_menu, text="ادغام ویدئوها", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=merge_v).place(x=0, y=135)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=format_v.destroy).place(x=0, y=550)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn bold", 15)).place(x=0, y=0)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
+    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
+    Button(hamburgar_menu, text="برش ویدئو", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=crop_v).place(x=0, y=65)
+    Button(hamburgar_menu, text="چرخاندن ویدئو", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=rotate_v).place(x=0, y=100)
+    Button(hamburgar_menu, text="ادغام ویدئوها", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=merge_v).place(x=0, y=135)
+    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=format_v.destroy).place(x=0, y=550)
 
     # title and img
     Label(format_v, image=img, bg="light blue").place(x=150, y=0)
-    Label(format_v, text="تغییر پسوند", bg="light blue", justify="center", font=("vazir bold", 35)).place(x=325, y=0)
+    Label(format_v, text="تغییر پسوند", bg="light blue", justify="center", font=("Vazirmatn bold", 35)).place(x=325, y=0)
 
     # categories
 
@@ -88,7 +88,7 @@ def open_format_v_page(pre_page):
         video_detail = Frame(vid_p, width=600, height=200, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
         video_detail.pack(pady=5)
 
-        details = LabelFrame(video_detail, text="اطلاعات فایل", bg="light blue", font=("vazir bold", 15), height=180)
+        details = LabelFrame(video_detail, text="اطلاعات فایل", bg="light blue", font=("Vazirmatn bold", 15), height=180)
         details.pack(side="right", pady=10, padx=5)
 
         def convert_time(seconds):
@@ -107,19 +107,19 @@ def open_format_v_page(pre_page):
                 bytes = f"{round(bytes/1000000000, 2)} گیگابایت"
             return bytes
 
-        file_name = Label(details, text=f"{path.split('/')[-1]} : نام فایل", font=("vazir bold", 14), bg="light blue").pack()
-        file_size = Label(details, text=f"حجم فایل : {convert_size(os.path.getsize(path))}", font=("vazir", 12), bg="light blue").pack()
-        file_time = Label(details, text=f"{convert_time(VideoFileClip(path).duration)} : زمان فایل", font=("vazir", 12), bg="light blue").pack()
+        file_name = Label(details, text=f"{path.split('/')[-1]} : نام فایل", font=("Vazirmatn bold", 14), bg="light blue").pack()
+        file_size = Label(details, text=f"حجم فایل : {convert_size(os.path.getsize(path))}", font=("Vazirmatn", 12), bg="light blue").pack()
+        file_time = Label(details, text=f"{convert_time(VideoFileClip(path).duration)} : زمان فایل", font=("Vazirmatn", 12), bg="light blue").pack()
 
         f_img = PhotoImage(file=f"files/images/video/formats/{path.split('/')[-1].split('.')[-1]}.png")
         format_img = Label(video_detail, image=f_img, bg="light blue").pack(side="left", padx=5)
 
-        format_now = Label(vid_p, text=f"{path.split('/')[-1].split('.')[-1]} : پسوند کنونی", bg="light blue", font=("vazir bold", 15)).pack()
+        format_now = Label(vid_p, text=f"{path.split('/')[-1].split('.')[-1]} : پسوند کنونی", bg="light blue", font=("Vazirmatn bold", 15)).pack()
 
-        format_to = Label(vid_p, text=": تبدیل به", bg="light blue", font=("vazir bold", 15)).pack()
+        format_to = Label(vid_p, text=": تبدیل به", bg="light blue", font=("Vazirmatn bold", 15)).pack()
 
         to_format = StringVar()
-        to_format_cadr = ttk.Combobox(vid_p, textvariable=to_format, values=types_c, state="readonly", justify="center", font=("vazir bold", 10))
+        to_format_cadr = ttk.Combobox(vid_p, textvariable=to_format, values=types_c, state="readonly", justify="center", font=("Vazirmatn bold", 10))
         to_format_cadr.pack()
 
         def change_combo(e):
@@ -171,7 +171,7 @@ def open_format_v_page(pre_page):
                 vid_p.destroy()
                 messagebox.showinfo("ذخیره کردن ویدئو", ".ویدئو با موفقیت ذخیره شد")
 
-        render = Button(vid_p, text="انجام", bg="light blue", font=("vazir bold", 15), command=format)
+        render = Button(vid_p, text="انجام", bg="light blue", font=("Vazirmatn bold", 15), command=format)
 
         vid_p.mainloop()
 
@@ -184,6 +184,6 @@ def open_format_v_page(pre_page):
        
     select = PhotoImage(file="files/images/image/select_image.png")
     Button(cadr, image=select, bg="light blue", bd=0, activebackground="light blue", command=open_vid).place(x=150, y=0)
-    Button(cadr, text="انتخاب ویدئو", bg="light blue", font=("vazir bold", 17), bd=0, activebackground="light blue", command=open_vid).place(x=185, y=200)
+    Button(cadr, text="انتخاب ویدئو", bg="light blue", font=("Vazirmatn bold", 17), bd=0, activebackground="light blue", command=open_vid).place(x=185, y=200)
 
     format_v.mainloop()

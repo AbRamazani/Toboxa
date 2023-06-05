@@ -60,18 +60,18 @@ def open_format_i_page(pre_page):
         from filter_image import open_filter_i_page
         open_filter_i_page(format_i)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir bold", 15)).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="بُرش تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=crop_i).place(x=0, y=65)
-    Button(hamburgar_menu, text="تغییر اندازه", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=resize_i).place(x=0, y=100)
-    Button(hamburgar_menu, text="چرخاندن تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=rotate_i).place(x=0, y=135)
-    Button(hamburgar_menu, text="قراردادن فیلتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=filter_i).place(x=0, y=170)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("vazir", 15), command=format_i.destroy).place(x=0, y=550)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn bold", 15)).place(x=0, y=0)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
+    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
+    Button(hamburgar_menu, text="بُرش تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=crop_i).place(x=0, y=65)
+    Button(hamburgar_menu, text="تغییر اندازه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=resize_i).place(x=0, y=100)
+    Button(hamburgar_menu, text="چرخاندن تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=rotate_i).place(x=0, y=135)
+    Button(hamburgar_menu, text="قراردادن فیلتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=filter_i).place(x=0, y=170)
+    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=format_i.destroy).place(x=0, y=550)
 
     # title and img
     Label(format_i, image=img, bg="light blue").place(x=150, y=0)
-    Label(format_i, text="تغییر پسوند", bg="light blue", justify="center", font=("vazir bold", 35)).place(x=350, y=0)
+    Label(format_i, text="تغییر پسوند", bg="light blue", justify="center", font=("Vazirmatn bold", 35)).place(x=350, y=0)
 
     # categories
 
@@ -114,12 +114,12 @@ def open_format_i_page(pre_page):
         img_format.pack()
         photo.resize((round(wn*n_h), round(hn*n_h)))
 
-        format_now = Label(img_p, text=f"{path.split('/')[-1].split('.')[-1]} : پسوند کنونی", bg="light blue", font=("vazir bold", 15)).pack()
+        format_now = Label(img_p, text=f"{path.split('/')[-1].split('.')[-1]} : پسوند کنونی", bg="light blue", font=("Vazirmatn bold", 15)).pack()
 
-        format_to = Label(img_p, text=": تبدیل به", bg="light blue", font=("vazir bold", 15)).pack()
+        format_to = Label(img_p, text=": تبدیل به", bg="light blue", font=("Vazirmatn bold", 15)).pack()
 
         to_format = StringVar()
-        to_format_cadr = ttk.Combobox(img_p, textvariable=to_format, values=types_c, state="readonly", justify="center", font=("vazir bold", 10))
+        to_format_cadr = ttk.Combobox(img_p, textvariable=to_format, values=types_c, state="readonly", justify="center", font=("Vazirmatn bold", 10))
         to_format_cadr.pack()
 
         def change_combo(e):
@@ -150,7 +150,7 @@ def open_format_i_page(pre_page):
                 img_p.destroy()
                 messagebox.showinfo("ذخیره کردن تصویر", ".تصویر با موفقیت ذخیره شد")
 
-        render = Button(img_p, text="انجام", bg="light blue", font=("vazir bold", 15), command=change_format)
+        render = Button(img_p, text="انجام", bg="light blue", font=("Vazirmatn bold", 15), command=change_format)
 
         img_p.mainloop()
 
@@ -163,6 +163,6 @@ def open_format_i_page(pre_page):
     
     select = PhotoImage(file="files/images/image/select_image.png")
     Button(cadr, image=select, bg="light blue", command=open_img, bd=0, activebackground="light blue").place(x=150, y=0)
-    Button(cadr, text="انتخاب تصویر", bg="light blue", font=("vazir bold", 17), command=open_img, bd=0, activebackground="light blue").place(x=185, y=200)
+    Button(cadr, text="انتخاب تصویر", bg="light blue", font=("Vazirmatn bold", 17), command=open_img, bd=0, activebackground="light blue").place(x=185, y=200)
 
     format_i.mainloop()
