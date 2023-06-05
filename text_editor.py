@@ -12,32 +12,32 @@ def open_texte_page(pre_page):
 
     img = PhotoImage(file="files/images/programming/text-editor_icon.png")
 
-    # hamburgar menu
+    # hamburger menu
     global mak_ham
     mak_ham = -150
-    def open_hamburgar():
+    def open_hamburger():
         global mak_ham
         if mak_ham == -150:
-            hamburgar_b.config(bd=0, image="")
+            hamburger_b.config(bd=0, image="")
         if mak_ham <= 0:
-            hamburgar_menu.place(x=mak_ham, y=0)
+            hamburger_menu.place(x=mak_ham, y=0)
             mak_ham += 1
-            texte.after(10, open_hamburgar)
+            texte.after(10, open_hamburger)
 
-    def close_hamburgar():
+    def close_hamburger():
         global mak_ham
         if mak_ham == -150:
-            hamburgar_b.config(image=hamburgar_img)
+            hamburger_b.config(image=hamburger_img)
         if mak_ham >= -150:
-            hamburgar_menu.place(x=mak_ham, y=0)
+            hamburger_menu.place(x=mak_ham, y=0)
             mak_ham -= 1
-            texte.after(10, close_hamburgar)
+            texte.after(10, close_hamburger)
 
-    hamburgar_img = PhotoImage(file="files/images/root/menu.png")
-    hamburgar_b = Button(texte, image=hamburgar_img, bg="light blue", bd=0, command=open_hamburgar)
-    hamburgar_b.place(x=0, y=0)
+    hamburger_img = PhotoImage(file="files/images/root/menu.png")
+    hamburger_b = Button(texte, image=hamburger_img, bg="light blue", bd=0, command=open_hamburger)
+    hamburger_b.place(x=0, y=0)
 
-    hamburgar_menu = Frame(texte, width=150, height=600, bg="#01ab8c")
+    hamburger_menu = Frame(texte, width=150, height=600, bg="#01ab8c")
 
     def home():
         texte.destroy()
@@ -52,12 +52,12 @@ def open_texte_page(pre_page):
         from compress import open_compress_page
         open_compress_page(texte)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="لورم ساز", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=lorem).place(x=0, y=65)
-    Button(hamburgar_menu, text="فشرده‌سازی\n‌فایل‌های‌وب", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=compress).place(x=0, y=100)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=texte.destroy).place(x=0, y=550)
+    Label(hamburger_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
+    Button(hamburger_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburger).place(x=125, y=0)
+    Button(hamburger_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
+    Button(hamburger_menu, text="لورم ساز", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=lorem).place(x=0, y=65)
+    Button(hamburger_menu, text="فشرده‌سازی\n‌فایل‌های‌وب", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=compress).place(x=0, y=100)
+    Button(hamburger_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=texte.destroy).place(x=0, y=550)
 
     # title and img
     Label(texte, image=img, bg="light blue").place(x=150, y=0)

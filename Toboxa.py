@@ -43,32 +43,32 @@ def home():
     root.geometry("650x600+50+50")
     root.resizable(width=False, height=False)
 
-    # hamburgar menu
+    # hamburger menu
     global mak_ham, math_mak, programming_mak, image_mak, video_mak, other_mak, about_mak
     mak_ham = -150
-    def open_hamburgar():
+    def open_hamburger():
         global mak_ham
         if mak_ham == -150:
-            hamburgar_b.config(bd=0, image="")
+            hamburger_b.config(bd=0, image="")
         if mak_ham <= 0:
-            hamburgar_menu.place(x=mak_ham, y=0)
+            hamburger_menu.place(x=mak_ham, y=0)
             mak_ham += 1
-            root.after(10, open_hamburgar)
+            root.after(10, open_hamburger)
 
-    def close_hamburgar():
+    def close_hamburger():
         global mak_ham
         if mak_ham == -150:
-            hamburgar_b.config(image=hamburgar_img)
+            hamburger_b.config(image=hamburger_img)
         if mak_ham >= -150:
-            hamburgar_menu.place(x=mak_ham, y=0)
+            hamburger_menu.place(x=mak_ham, y=0)
             mak_ham -= 1
-            root.after(10, close_hamburgar)
+            root.after(10, close_hamburger)
 
-    hamburgar_img = PhotoImage(file="files/images/root/menu.png")
-    hamburgar_b = Button(root, image=hamburgar_img, bg="light blue", bd=0, command=open_hamburgar)
-    hamburgar_b.place(x=0, y=0)
+    hamburger_img = PhotoImage(file="files/images/root/menu.png")
+    hamburger_b = Button(root, image=hamburger_img, bg="light blue", bd=0, command=open_hamburger)
+    hamburger_b.place(x=0, y=0)
 
-    hamburgar_menu = Frame(root, width=150, height=600, bg="#01ab8c")
+    hamburger_menu = Frame(root, width=150, height=600, bg="#01ab8c")
 
     # open pages
 
@@ -239,16 +239,16 @@ def home():
             about_mak += 1
             root.after(5, open_about)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_home).place(x=0, y=30)
-    Button(hamburgar_menu, text="ریاضی", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_math).place(x=0, y=65)
-    Button(hamburgar_menu, text="برنامه نویسی", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_programming).place(x=0, y=100)
-    Button(hamburgar_menu, text="تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_image).place(x=0, y=135)
-    Button(hamburgar_menu, text="ویدئو", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_video).place(x=0, y=170)
-    Button(hamburgar_menu, text="سایر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_other).place(x=0, y=205)
-    Button(hamburgar_menu, text="درباره من", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_about).place(x=0, y=240)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=root.destroy).place(x=0, y=550)
+    Label(hamburger_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
+    Button(hamburger_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburger).place(x=125, y=0)
+    Button(hamburger_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_home).place(x=0, y=30)
+    Button(hamburger_menu, text="ریاضی", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_math).place(x=0, y=65)
+    Button(hamburger_menu, text="برنامه نویسی", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_programming).place(x=0, y=100)
+    Button(hamburger_menu, text="تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_image).place(x=0, y=135)
+    Button(hamburger_menu, text="ویدئو", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_video).place(x=0, y=170)
+    Button(hamburger_menu, text="سایر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_other).place(x=0, y=205)
+    Button(hamburger_menu, text="درباره من", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_about).place(x=0, y=240)
+    Button(hamburger_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=root.destroy).place(x=0, y=550)
 
     # title and img
     Label(root, image=img, bg="light blue").place(x=150, y=0)

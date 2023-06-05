@@ -12,32 +12,32 @@ def open_net_speed_page(pre_page):
 
     img = PhotoImage(file="files/images/other/speed-test_icon.png")
 
-    # hamburgar menu
+    # hamburger menu
     global mak_ham
     mak_ham = -150
-    def open_hamburgar():
+    def open_hamburger():
         global mak_ham
         if mak_ham == -150:
-            hamburgar_b.config(bd=0, image="")
+            hamburger_b.config(bd=0, image="")
         if mak_ham <= 0:
-            hamburgar_menu.place(x=mak_ham, y=0)
+            hamburger_menu.place(x=mak_ham, y=0)
             mak_ham += 1
-            net_speed.after(10, open_hamburgar)
+            net_speed.after(10, open_hamburger)
 
-    def close_hamburgar():
+    def close_hamburger():
         global mak_ham
         if mak_ham == -150:
-            hamburgar_b.config(image=hamburgar_img)
+            hamburger_b.config(image=hamburger_img)
         if mak_ham >= -150:
-            hamburgar_menu.place(x=mak_ham, y=0)
+            hamburger_menu.place(x=mak_ham, y=0)
             mak_ham -= 1
-            net_speed.after(10, close_hamburgar)
+            net_speed.after(10, close_hamburger)
 
-    hamburgar_img = PhotoImage(file="files/images/root/menu.png")
-    hamburgar_b = Button(net_speed, image=hamburgar_img, bg="light blue", bd=0, command=open_hamburgar)
-    hamburgar_b.place(x=0, y=0)
+    hamburger_img = PhotoImage(file="files/images/root/menu.png")
+    hamburger_b = Button(net_speed, image=hamburger_img, bg="light blue", bd=0, command=open_hamburger)
+    hamburger_b.place(x=0, y=0)
 
-    hamburgar_menu = Frame(net_speed, width=150, height=600, bg="#01ab8c")
+    hamburger_menu = Frame(net_speed, width=150, height=600, bg="#01ab8c")
 
     def home():
         net_speed.destroy()
@@ -60,14 +60,14 @@ def open_net_speed_page(pre_page):
         from qrcode_maker import open_qrcode_maker_page
         open_qrcode_maker_page(net_speed)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="تایمر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=timer).place(x=0, y=65)
-    Button(hamburgar_menu, text="کرنومتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=stopwatch).place(x=0, y=100)
-    Button(hamburgar_menu, text="تولیدکننده رمز", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=password_maker).place(x=0, y=135)
-    Button(hamburgar_menu, text="تولیدکننده\nQRcode", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=qrcode_maker).place(x=0, y=170)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=net_speed.destroy).place(x=0, y=550)
+    Label(hamburger_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
+    Button(hamburger_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburger).place(x=125, y=0)
+    Button(hamburger_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
+    Button(hamburger_menu, text="تایمر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=timer).place(x=0, y=65)
+    Button(hamburger_menu, text="کرنومتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=stopwatch).place(x=0, y=100)
+    Button(hamburger_menu, text="تولیدکننده رمز", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=password_maker).place(x=0, y=135)
+    Button(hamburger_menu, text="تولیدکننده\nQRcode", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=qrcode_maker).place(x=0, y=170)
+    Button(hamburger_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=net_speed.destroy).place(x=0, y=550)
 
     # title and img
     Label(net_speed, image=img, bg="light blue").place(x=150, y=0)

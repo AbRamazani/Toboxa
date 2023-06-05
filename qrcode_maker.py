@@ -50,32 +50,32 @@ def open_qrcode_maker_page(pre_page):
 
     img = PhotoImage(file="files/images/other/qr-code_icon.png")
 
-    # hamburgar menu
+    # hamburger menu
     global mak_ham
     mak_ham = -150
-    def open_hamburgar():
+    def open_hamburger():
         global mak_ham
         if mak_ham == -150:
-            hamburgar_b.config(bd=0, image="")
+            hamburger_b.config(bd=0, image="")
         if mak_ham <= 0:
-            hamburgar_menu.place(x=mak_ham, y=0)
+            hamburger_menu.place(x=mak_ham, y=0)
             mak_ham += 1
-            qrcode_maker.after(10, open_hamburgar)
+            qrcode_maker.after(10, open_hamburger)
 
-    def close_hamburgar():
+    def close_hamburger():
         global mak_ham
         if mak_ham == -150:
-            hamburgar_b.config(image=hamburgar_img)
+            hamburger_b.config(image=hamburger_img)
         if mak_ham >= -150:
-            hamburgar_menu.place(x=mak_ham, y=0)
+            hamburger_menu.place(x=mak_ham, y=0)
             mak_ham -= 1
-            qrcode_maker.after(10, close_hamburgar)
+            qrcode_maker.after(10, close_hamburger)
 
-    hamburgar_img = PhotoImage(file="files/images/root/menu.png")
-    hamburgar_b = Button(qrcode_maker, image=hamburgar_img, bg="light blue", bd=0, command=open_hamburgar)
-    hamburgar_b.place(x=0, y=0)
+    hamburger_img = PhotoImage(file="files/images/root/menu.png")
+    hamburger_b = Button(qrcode_maker, image=hamburger_img, bg="light blue", bd=0, command=open_hamburger)
+    hamburger_b.place(x=0, y=0)
 
-    hamburgar_menu = Frame(qrcode_maker, width=150, height=600, bg="#01ab8c")
+    hamburger_menu = Frame(qrcode_maker, width=150, height=600, bg="#01ab8c")
 
     def home():
         qrcode_maker.destroy()
@@ -98,14 +98,14 @@ def open_qrcode_maker_page(pre_page):
         from password_maker import open_password_maker_page
         open_password_maker_page(qrcode_maker)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="تایمر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=timer).place(x=0, y=65)
-    Button(hamburgar_menu, text="کرنومتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=stopwatch).place(x=0, y=100)
-    Button(hamburgar_menu, text="سرعت اینترنت", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=net_speed).place(x=0, y=135)
-    Button(hamburgar_menu, text="تولیدکننده رمز", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=password_maker).place(x=0, y=170)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=qrcode_maker.destroy).place(x=0, y=550)
+    Label(hamburger_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
+    Button(hamburger_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburger).place(x=125, y=0)
+    Button(hamburger_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
+    Button(hamburger_menu, text="تایمر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=timer).place(x=0, y=65)
+    Button(hamburger_menu, text="کرنومتر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=stopwatch).place(x=0, y=100)
+    Button(hamburger_menu, text="سرعت اینترنت", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=net_speed).place(x=0, y=135)
+    Button(hamburger_menu, text="تولیدکننده رمز", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=password_maker).place(x=0, y=170)
+    Button(hamburger_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=qrcode_maker.destroy).place(x=0, y=550)
 
     # title and img
     Label(qrcode_maker, image=img, bg="light blue").place(x=150, y=0)
