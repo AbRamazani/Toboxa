@@ -252,46 +252,46 @@ def home():
 
     # title and img
     Label(root, image=img, bg="light blue").place(x=150, y=0)
-    Label(root, text="توبوکسا", bg="light blue", justify="center", font=("Vazirmatn", 50, "bold")).place(x=375, y=0)
-    Label(root, text="جعبه ابزاری برای رایانه شما", bg="light blue", fg="#404040", justify="center", font=("Vazirmatn", 17, "bold")).place(x=360, y=100)
+    Label(root, text="توبوکسا", bg="light blue", justify="center", font=("Vazirmatn", 57, "bold")).place(x=375, y=0)
+    Label(root, text="جعبه ابزاری برای رایانه شما", bg="light blue", fg="#404040", justify="center", font=("Vazirmatn", 17, "bold")).place(x=365, y=110)
 
     # categories
 
     cadr = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
     cadr.place(x=150, y=200)
 
-    categories_title = Label(cadr, text="دسته بندی ها", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=175, y=0)
+    categories_title = Label(cadr, text="دسته بندی ها", bg="light blue", justify="center", font=("Vazirmatn", 25, "bold")).place(x=145, y=0)
 
     math_img = PhotoImage(file="files/images/root/math_icon.png")
     math = Button(cadr, image=math_img, bg="light blue", bd=0, activebackground="light blue", command=open_math)
-    math_title = Button(cadr, text="ریاضی", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=open_math)
+    math_title = Button(cadr, text="ریاضی", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=open_math)
     math.place(x=340, y=50)
-    math_title.place(x=370, y=170)
+    math_title.place(x=365, y=180, height=30)
 
     programming_img = PhotoImage(file="files/images/root/programming_icon.png")
     programming = Button(cadr, image=programming_img, bg="light blue", bd=0, activebackground="light blue", command=open_programming)
-    programming_title = Button(cadr, text="برنامه نویسی", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=open_programming)
+    programming_title = Button(cadr, text="برنامه نویسی", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=open_programming)
     programming.place(x=170, y=55)
-    programming_title.place(x=180, y=170)
+    programming_title.place(x=165, y=180, height=30)
 
 
     image_img = PhotoImage(file="files/images/root/image_icon.png")
     image = Button(cadr, image=image_img, bg="light blue", bd=0, activebackground="light blue", command=open_image)
-    image_title = Button(cadr, text="تصویر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=open_image)
+    image_title = Button(cadr, text="تصویر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=open_image)
     image.place(x=0, y=45)
-    image_title.place(x=35, y=170)
+    image_title.place(x=30, y=180, height=30)
 
     video_img = PhotoImage(file="files/images/root/video_icon.png")
     video = Button(cadr, image=video_img, bg="light blue", bd=0, activebackground="light blue", command=open_video)
-    video_title = Button(cadr, text="ویدئو", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=open_video)
+    video_title = Button(cadr, text="ویدئو", bg="light blue", bd=-2, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=open_video)
     video.place(x=338, y=210)
-    video_title.place(x=380, y=330)
+    video_title.place(x=370, y=340, height=30)
 
     other_img = PhotoImage(file="files/images/root/other_icon.png")
     other = Button(cadr, image=other_img, bg="light blue", bd=0, activebackground="light blue", command=open_other)
-    other_title = Button(cadr, text="سایر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=open_other)
+    other_title = Button(cadr, text="سایر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=open_other)
     other.place(x=170, y=220)
-    other_title.place(x=190, y=330)
+    other_title.place(x=180, y=340, height=30)
 
     #close icon:
     close_icon = PhotoImage(file="files/images/root/cancel_icon.png")
