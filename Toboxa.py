@@ -239,16 +239,16 @@ def home():
             about_mak += 1
             root.after(5, open_about)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_home).place(x=0, y=30)
-    Button(hamburgar_menu, text="ریاضی", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_math).place(x=0, y=65)
-    Button(hamburgar_menu, text="برنامه نویسی", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_programming).place(x=0, y=100)
-    Button(hamburgar_menu, text="تصویر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_image).place(x=0, y=135)
-    Button(hamburgar_menu, text="ویدئو", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_video).place(x=0, y=170)
-    Button(hamburgar_menu, text="سایر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_other).place(x=0, y=205)
-    Button(hamburgar_menu, text="درباره من", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=open_about).place(x=0, y=240)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=root.destroy).place(x=0, y=550)
+    Label(hamburgar_menu, text="توبوکسا", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 17, "bold")).place(x=0, y=0, width=150, height=35)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=-7)
+    Button(hamburgar_menu, text="خانه", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=open_home).place(x=0, y=45, width=150, height=35)
+    Button(hamburgar_menu, text="ریاضی", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=open_math).place(x=0, y=80, width=150, height=35)
+    Button(hamburgar_menu, text="برنامه نویسی", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=open_programming).place(x=0, y=115, width=150, height=35)
+    Button(hamburgar_menu, text="تصویر", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=open_image).place(x=0, y=150, width=150, height=35)
+    Button(hamburgar_menu, text="ویدئو", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=open_video).place(x=0, y=185, width=150, height=35)
+    Button(hamburgar_menu, text="سایر", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=open_other).place(x=0, y=220, width=150, height=35)
+    Button(hamburgar_menu, text="درباره من", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=open_about).place(x=0, y=255, width=150, height=35)
+    Button(hamburgar_menu, text="خروج", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 17), command=root.destroy).place(x=0, y=550, width=150, height=50)
 
     # title and img
     Label(root, image=img, bg="light blue").place(x=150, y=0)
