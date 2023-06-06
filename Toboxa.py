@@ -327,26 +327,26 @@ def home():
 
     # programming parts:
     programming_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
-    programming_page_title = Label(programming_page, text="ابزار های برنامه نویسی", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=127, y=0)
+    programming_page_title = Label(programming_page, text="ابزار های برنامه نویسی", bg="light blue", justify="center", font=("Vazirmatn", 25, "bold")).place(x=85, y=0)
     Button(programming_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
 
     lorem_img = PhotoImage(file="files/images/programming/publishing_icon.png")
     lorem = Button(programming_page, image=lorem_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_lorem_page(root))
-    lorem_title = Button(programming_page, text="لورم ساز", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_lorem_page(root))
+    lorem_title = Button(programming_page, text="لورم ساز", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_lorem_page(root))
     lorem.place(x=340, y=50)
-    lorem_title.place(x=363, y=180)
+    lorem_title.place(x=355, y=180, height=30)
 
     compress_img = PhotoImage(file="files/images/programming/compression_icon.png")
     compress = Button(programming_page, image=compress_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_compress_page(root))
-    compress_title = Button(programming_page, text="فشرده‌سازی‌فایل‌‌وب", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_compress_page(root))
+    compress_title = Button(programming_page, text="فشرده‌سازی‌فایل‌‌وب", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 16, "bold"), command=lambda: open_compress_page(root))
     compress.place(x=170, y=50)
-    compress_title.place(x=150, y=180)
+    compress_title.place(x=150, y=180, height=30)
 
     text_editor_img = PhotoImage(file="files/images/programming/text-editor_icon.png")
     text_editor = Button(programming_page, image=text_editor_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_texte_page(root))
-    text_editor_title = Button(programming_page, text="ویرایشگر متن", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_texte_page(root))
+    text_editor_title = Button(programming_page, text="ویرایشگر متن", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_texte_page(root))
     text_editor.place(x=5, y=50)
-    text_editor_title.place(x=10, y=180)
+    text_editor_title.place(x=0, y=180, height=30)
 
     # image parts:
     image_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
