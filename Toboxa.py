@@ -298,32 +298,32 @@ def home():
 
     # math parts:
     math_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
-    math_page_title = Label(math_page, text="ابزار های ریاضی", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=165, y=0)
+    math_page_title = Label(math_page, text="ابزار های ریاضی", bg="light blue", justify="center", font=("Vazirmatn", 25, "bold")).place(x=135, y=0)
     Button(math_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
 
     perimete_img = PhotoImage(file="files/images/math/select_icon.png")
     perimete = Button(math_page, image=perimete_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_area_page(root))
-    perimete_title = Button(math_page, text="محاسبه مساحت", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_area_page(root))
+    perimete_title = Button(math_page, text="محاسبه مساحت", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 17, "bold"), command=lambda: open_area_page(root))
     perimete.place(x=340, y=50)
-    perimete_title.place(x=340, y=170)
+    perimete_title.place(x=315, y=180, height=30, width=170)
 
     date_img = PhotoImage(file="files/images/math/schedule_icon.png")
     date = Button(math_page, image=date_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_date_page(root))
-    date_title = Button(math_page, text="تبدیل تاریخ", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_date_page(root))
+    date_title = Button(math_page, text="تبدیل تاریخ", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_date_page(root))
     date.place(x=170, y=50)
-    date_title.place(x=185, y=170)
+    date_title.place(x=170, y=180, height=30)
 
     calculator_img = PhotoImage(file="files/images/math/calculator_icon.png")
     calculator = Button(math_page, image=calculator_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_calculator_page(root))
-    calculator_title = Button(math_page, text="ماشین حساب", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_calculator_page(root))
+    calculator_title = Button(math_page, text="ماشین حساب", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_calculator_page(root))
     calculator.place(x=0, y=50)
-    calculator_title.place(x=14, y=170)
+    calculator_title.place(x=0, y=180, height=30, width=150)
 
     unit_math_img = PhotoImage(file="files/images/math/cost_icon.png")
     unit_math = Button(math_page, image=unit_math_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_unit_math_page(root))
-    unit_math_title = Button(math_page, text="مبدل واحد", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_unit_math_page(root))
+    unit_math_title = Button(math_page, text="مبدل واحد", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_unit_math_page(root))
     unit_math.place(x=338, y=210)
-    unit_math_title.place(x=360, y=330)
+    unit_math_title.place(x=345, y=345, height=30)
 
     # programming parts:
     programming_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
