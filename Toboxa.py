@@ -414,38 +414,38 @@ def home():
 
     # other parts:
     other_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
-    other_page_title = Label(other_page, text="سایر ابزار ها", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=175, y=0)
+    other_page_title = Label(other_page, text="سایر ابزار ها", bg="light blue", justify="center", font=("Vazirmatn", 25, "bold")).place(x=165, y=0)
     Button(other_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
 
     timer_img = PhotoImage(file="files/images/other/timer_icon.png")
     timer = Button(other_page, image=timer_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_timer_page(root))
-    timer_title = Button(other_page, text="تایمر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_timer_page(root))
+    timer_title = Button(other_page, text="تایمر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_timer_page(root))
     timer.place(x=340, y=50)
-    timer_title.place(x=380, y=170)
+    timer_title.place(x=370, y=180, height=30, width=80)
 
     stopwatch_img = PhotoImage(file="files/images/other/stopwatch_icon.png")
     stopwatch = Button(other_page, image=stopwatch_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_stopwatch_page(root))
-    stopwatch_title = Button(other_page, text="کرنومتر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_stopwatch_page(root))
+    stopwatch_title = Button(other_page, text="کرنومتر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_stopwatch_page(root))
     stopwatch.place(x=170, y=50)
-    stopwatch_title.place(x=215, y=170)
+    stopwatch_title.place(x=210, y=180, height=30)
 
     speed_img = PhotoImage(file="files/images/other/speed-test_icon.png")
     speed = Button(other_page, image=speed_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_net_speed_page(root))
-    speed_title = Button(other_page, text="سرعت اینترنت", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_net_speed_page(root))
+    speed_title = Button(other_page, text="سرعت اینترنت", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_net_speed_page(root))
     speed.place(x=0, y=50)
-    speed_title.place(x=12, y=170)
+    speed_title.place(x=0, y=180, height=30)
 
     password_img = PhotoImage(file="files/images/other/password_icon.png")
     password = Button(other_page, image=password_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_password_maker_page(root))
-    password_title = Button(other_page, text="تولید کننده رمز", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_password_maker_page(root))
-    password.place(x=338, y=210)
-    password_title.place(x=345, y=330)
+    password_title = Button(other_page, text="تولید کننده رمز", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_password_maker_page(root))
+    password.place(x=290, y=210)
+    password_title.place(x=275, y=340, height=30)
 
     qrcode_img = PhotoImage(file="files/images/other/qr-code_icon.png")
     qrcode = Button(other_page, image=qrcode_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_qrcode_maker_page(root))
-    qrcode_title = Button(other_page, text="QRcode تولید کننده", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_qrcode_maker_page(root))
-    qrcode.place(x=175, y=210)
-    qrcode_title.place(x=160, y=330)
+    qrcode_title = Button(other_page, text="QRcode تولید کننده", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_qrcode_maker_page(root))
+    qrcode.place(x=85, y=210)
+    qrcode_title.place(x=35, y=340, height=30)
 
     # about me:
     about_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
