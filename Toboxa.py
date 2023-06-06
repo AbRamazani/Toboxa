@@ -385,32 +385,32 @@ def home():
 
     # video parts:
     video_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
-    video_page_title = Label(video_page, text="ابزار های ویدئو", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=175, y=0)
+    video_page_title = Label(video_page, text="ابزار های ویدئو", bg="light blue", justify="center", font=("Vazirmatn", 25, "bold")).place(x=150, y=0)
     Button(video_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
 
     crop_v_img = PhotoImage(file="files/images/video/crop_icon.png")
     crop_v = Button(video_page, image=crop_v_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_crop_v_page(root))
-    crop_v_title = Button(video_page, text="برش", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_crop_v_page(root))
+    crop_v_title = Button(video_page, text="برش", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_crop_v_page(root))
     crop_v.place(x=340, y=50)
-    crop_v_title.place(x=375, y=170)
+    crop_v_title.place(x=370, y=180, height=30)
 
     foramt_v_img = PhotoImage(file="files/images/video/format-film_icon.png")
     foramt_v = Button(video_page, image=foramt_v_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_format_v_page(root))
-    foramt_v_title = Button(video_page, text="تغییر پسوند", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_format_v_page(root))
+    foramt_v_title = Button(video_page, text="تغییر پسوند", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_format_v_page(root))
     foramt_v.place(x=170, y=50)
-    foramt_v_title.place(x=185, y=170)
+    foramt_v_title.place(x=170, y=180, height=30)
 
     rotate_v_img = PhotoImage(file="files/images/video/rotation_icon.png")
     rotate_v = Button(video_page, image=rotate_v_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_rotate_v_page(root))
-    rotate_v_title = Button(video_page, text="چرخاندن", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_rotate_v_page(root))
+    rotate_v_title = Button(video_page, text="چرخاندن", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_rotate_v_page(root))
     rotate_v.place(x=0, y=40)
-    rotate_v_title.place(x=16, y=170)
+    rotate_v_title.place(x=16, y=180, height=30)
 
     paste_v_img = PhotoImage(file="files/images/video/paste-video_icon.png")
     paste_v = Button(video_page, image=paste_v_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_merge_v_page(root))
-    paste_v_title = Button(video_page, text="ادغام ویدئوها", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_merge_v_page(root))
+    paste_v_title = Button(video_page, text="ادغام ویدئوها", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_merge_v_page(root))
     paste_v.place(x=338, y=210)
-    paste_v_title.place(x=345, y=330)
+    paste_v_title.place(x=325, y=345, height=30)
 
     # other parts:
     other_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
