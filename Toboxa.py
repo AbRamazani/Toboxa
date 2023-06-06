@@ -350,38 +350,38 @@ def home():
 
     # image parts:
     image_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
-    image_page_title = Label(image_page, text="ابزار های تصویر", bg="light blue", justify="center", font=("Vazirmatn", 20, "bold")).place(x=165, y=0)
+    image_page_title = Label(image_page, text="ابزار های تصویر", bg="light blue", justify="center", font=("Vazirmatn", 25, "bold")).place(x=130, y=0)
     Button(image_page, image=close_icon, bg="light blue", bd=0, activebackground="light blue", command=open_home).place(x=430, y=0)
 
     crop_i_img = PhotoImage(file="files/images/image/crop_icon.png")
     crop_i = Button(image_page, image=crop_i_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_crop_i_page(root))
-    crop_i_title = Button(image_page, text="برش", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_crop_i_page(root))
+    crop_i_title = Button(image_page, text="برش", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_crop_i_page(root))
     crop_i.place(x=340, y=50)
-    crop_i_title.place(x=375, y=170)
+    crop_i_title.place(x=375, y=180, height=30)
 
     resize_i_img = PhotoImage(file="files/images/image/resizing_icon.png")
     resize_i = Button(image_page, image=resize_i_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_resize_i_page(root))
-    resize_i_title = Button(image_page, text="تغییر اندازه", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_resize_i_page(root))
+    resize_i_title = Button(image_page, text="تغییر اندازه", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_resize_i_page(root))
     resize_i.place(x=170, y=50)
-    resize_i_title.place(x=185, y=170)
+    resize_i_title.place(x=170, y=180, height=30)
 
     foramt_i_img = PhotoImage(file="files/images/image/format-image_icon.png")
     foramt_i = Button(image_page, image=foramt_i_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_format_i_page(root))
-    foramt_i_title = Button(image_page, text="تغییر پسوند", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_format_i_page(root))
+    foramt_i_title = Button(image_page, text="تغییر پسوند", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_format_i_page(root))
     foramt_i.place(x=0, y=50)
-    foramt_i_title.place(x=14, y=170)
+    foramt_i_title.place(x=0, y=180, height=30)
 
     rotate_i_img = PhotoImage(file="files/images/image/rotation_icon.png")
     rotate_i = Button(image_page, image=rotate_i_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_rotate_i_page(root))
-    rotate_i_title = Button(image_page, text="چرخاندن", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_rotate_i_page(root))
+    rotate_i_title = Button(image_page, text="چرخاندن", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_rotate_i_page(root))
     rotate_i.place(x=338, y=210)
-    rotate_i_title.place(x=365, y=330)
+    rotate_i_title.place(x=350, y=340, height=30)
 
     filter_i_img = PhotoImage(file="files/images/image/filter-image_icon.png")
     filter_i = Button(image_page, image=filter_i_img, bg="light blue", bd=0, activebackground="light blue", command=lambda: open_filter_i_page(root))
-    filter_i_title = Button(image_page, text="قراردادن فیلتر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 15, "bold"), command=lambda: open_filter_i_page(root))
+    filter_i_title = Button(image_page, text="قراردادن فیلتر", bg="light blue", bd=0, activebackground="light blue", font=("Vazirmatn", 18, "bold"), command=lambda: open_filter_i_page(root))
     filter_i.place(x=175, y=210)
-    filter_i_title.place(x=185, y=330)
+    filter_i_title.place(x=170, y=340, height=30)
 
     # video parts:
     video_page = Frame(root, width=495, height=395, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
