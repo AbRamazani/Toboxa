@@ -63,13 +63,13 @@ def open_unit_math_page(pre_page):
         from calculator import open_calculator_page
         open_calculator_page(unit_math)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="محاسبه مساحت", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=area).place(x=0, y=65)
-    Button(hamburgar_menu, text="تبدیل تاریخ", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=date).place(x=0, y=100)
-    Button(hamburgar_menu, text="ماشین حساب", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=calculator).place(x=0, y=135)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=unit_math.destroy).place(x=0, y=550)
+    Label(hamburgar_menu, text="توبوکسا", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 17, "bold")).place(x=0, y=0, width=150, height=35)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=-7)
+    Button(hamburgar_menu, text="خانه", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=home).place(x=0, y=45, width=150, height=35)
+    Button(hamburgar_menu, text="محاسبه مساحت", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=area).place(x=0, y=80, width=150, height=35)
+    Button(hamburgar_menu, text="تبدیل تاریخ", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=date).place(x=0, y=115, width=150, height=35)
+    Button(hamburgar_menu, text="ماشین حساب", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=calculator).place(x=0, y=150, width=150, height=35)
+    Button(hamburgar_menu, text="خروج", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 17), command=unit_math.destroy).place(x=0, y=550, width=150, height=50)
 
     # title and img
     Label(unit_math, image=img, bg="light blue").place(x=150, y=0)
