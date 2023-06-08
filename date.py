@@ -117,15 +117,15 @@ def open_date_page(pre_page):
     Button(hamburgar_menu, text="خروج", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 17), command=date.destroy).place(x=0, y=550, width=150, height=50)
 
     # title and img
-    Label(date, image=img, bg="light blue").place(x=150, y=0)
-    Label(date, text="تبدیل تاریخ", bg="light blue", justify="center", font=("Vazirmatn Medium", 35, "bold")).place(x=300, y=0)
+    Label(date, image=img, bg="light blue").place(x=150, y=0, height=150)
+    Label(date, text="تبدیل تاریخ", bg="light blue", justify="center", font=("Vazirmatn Medium", 35, "bold")).place(x=350, y=0, height=150)
 
     # categories
 
     cadr = Frame(date, width=495, height=445, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
     cadr.place(x=150, y=150)
 
-    Label(cadr, text=": نوع تبدیل", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=300, y=0)
+    Label(cadr, text=": نوع تبدیل", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=315, y=0)
     type_con_t = StringVar()
     type_con = ttk.Combobox(cadr, textvariable=type_con_t, values=("شمسی به میلادی", "میلادی به شمسی"), state="readonly", justify="center", font=("Vazirmatn Medium", 10, "bold"))
     type_con.place(x=135, y=5)
@@ -133,9 +133,9 @@ def open_date_page(pre_page):
     def show_comboboxes(event):
         global day, month, year
         type_s = type_con_t.get()
-        Label(cadr, text=": روز", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=420, y=40)
-        Label(cadr, text=": ماه", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=180, y=40)
-        Label(cadr, text=": سال", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=250, y=80)
+        Label(cadr, text=": روز", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=430, y=40)
+        Label(cadr, text=": ماه", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=190, y=40)
+        Label(cadr, text=": سال", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=262, y=80)
         sub.place(x=200, y=120)
         now.place(x=400, y=100)
         if type_s == "شمسی به میلادی":
