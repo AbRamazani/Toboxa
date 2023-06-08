@@ -71,8 +71,8 @@ def open_area_page(pre_page):
     Button(hamburgar_menu, text="خروج", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 17), command=area.destroy).place(x=0, y=550, width=150, height=50)
 
     # title and img
-    Label(area, image=img, bg="light blue").place(x=150, y=0)
-    Label(area, text="محاسبه مساحت", bg="light blue", justify="center", font=("Vazirmatn Medium", 35, "bold")).place(x=300, y=0)
+    Label(area, image=img, bg="light blue").place(x=150, y=0, height=150)
+    Label(area, text="محاسبه مساحت", bg="light blue", justify="center", font=("Vazirmatn Medium", 35, "bold")).place(x=300, y=0, height=150)
 
     # categories
 
@@ -454,16 +454,16 @@ def open_area_page(pre_page):
 
         ellipse.mainloop()
 
-    Button(cadr, text="مستطیل", font=("Vazirmatn Medium", 15, "bold"), bg="light blue", width=13, height=2, command=rectangle_page).place(x=2, y=0)
-    Button(cadr, text="مربع", font=("Vazirmatn Medium", 15, "bold"), bg="light blue", width=13, height=2, command=square_page).place(x=166, y=0)
-    Button(cadr, text="متوازی الاضلاع", font=("Vazirmatn Medium", 15, "bold"), bg="light blue", width=13, height=2, command=parallelogram_page).place(x=330, y=0)
-    Button(cadr, text="لوزی", font=("Vazirmatn Medium", 15, "bold"), bg="light blue", width=13, height=2, command=rhombus_page).place(x=2, y=100)
-    Button(cadr, text="مثلث", font=("Vazirmatn Medium", 15, "bold"), bg="light blue", width=13, height=2, command=triangle_page).place(x=166, y=100)
-    Button(cadr, text="ذوزنقه", font=("Vazirmatn Medium", 15, "bold"), bg="light blue", width=13, height=2, command=trapezoid_page).place(x=330, y=100)
-    Button(cadr, text="پنج ضلعی", font=("Vazirmatn Medium", 15, "bold"), bg="light blue", width=13, height=2, command=pentagon_page).place(x=330, y=200)
-    Button(cadr, text="شش ضلعی", font=("Vazirmatn Medium", 15, "bold"), bg="light blue", width=13, height=2, command=hexagon_page).place(x=166, y=200)
-    Button(cadr, text="هشت ضلعی", font=("Vazirmatn Medium", 15, "bold"), bg="light blue", width=13, height=2, command=octagon_page).place(x=2, y=200)
-    Button(cadr, text="دایره", font=("Vazirmatn Medium", 15, "bold"), bg="light blue", width=13, height=2, command=circle_page).place(x=166, y=300)
-    Button(cadr, text="بیضی", font=("Vazirmatn Medium", 15, "bold"), bg="light blue", width=13, height=2, command=ellipse_page).place(x=330, y=300)
+    Button(cadr, text="مستطیل", font=("Vazirmatn Medium", 17, "bold"), bg="light blue", height=2, command=rectangle_page).place(x=2, y=0, width=153, height=80)
+    Button(cadr, text="مربع", font=("Vazirmatn Medium", 17, "bold"), bg="light blue", height=2, command=square_page).place(x=166, y=0, width=153, height=80)
+    Button(cadr, text="متوازی الاضلاع", font=("Vazirmatn Medium", 17, "bold"), bg="light blue", height=2, command=parallelogram_page).place(x=330, y=0, width=153, height=80)
+    Button(cadr, text="لوزی", font=("Vazirmatn Medium", 17, "bold"), bg="light blue", height=2, command=rhombus_page).place(x=2, y=100, width=153, height=80)
+    Button(cadr, text="مثلث", font=("Vazirmatn Medium", 17, "bold"), bg="light blue", height=2, command=triangle_page).place(x=166, y=100, width=153, height=80)
+    Button(cadr, text="ذوزنقه", font=("Vazirmatn Medium", 17, "bold"), bg="light blue", height=2, command=trapezoid_page).place(x=330, y=100, width=153, height=80)
+    Button(cadr, text="پنج ضلعی", font=("Vazirmatn Medium", 17, "bold"), bg="light blue", height=2, command=pentagon_page).place(x=330, y=200, width=153, height=80)
+    Button(cadr, text="شش ضلعی", font=("Vazirmatn Medium", 17, "bold"), bg="light blue", height=2, command=hexagon_page).place(x=166, y=200, width=153, height=80)
+    Button(cadr, text="هشت ضلعی", font=("Vazirmatn Medium", 17, "bold"), bg="light blue", height=2, command=octagon_page).place(x=2, y=200, width=153, height=80)
+    Button(cadr, text="دایره", font=("Vazirmatn Medium", 17, "bold"), bg="light blue", height=2, command=circle_page).place(x=166, y=300, width=153, height=80)
+    Button(cadr, text="بیضی", font=("Vazirmatn Medium", 17, "bold"), bg="light blue", height=2, command=ellipse_page).place(x=330, y=300, width=153, height=80)
 
     area.mainloop()
