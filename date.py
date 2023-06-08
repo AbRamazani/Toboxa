@@ -108,61 +108,61 @@ def open_date_page(pre_page):
         from unit_math import open_unit_math_page
         open_unit_math_page(date)
 
-    Label(hamburgar_menu, text="توبوکسا", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 17, "bold")).place(x=0, y=0, width=150, height=35)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=-7)
-    Button(hamburgar_menu, text="خانه", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=home).place(x=0, y=45, width=150, height=35)
-    Button(hamburgar_menu, text="محاسبه مساحت", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=area).place(x=0, y=80, width=150, height=35)
-    Button(hamburgar_menu, text="ماشین حساب", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=calculator).place(x=0, y=115, width=150, height=35)
-    Button(hamburgar_menu, text="مبدل واحد", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=unit_math).place(x=0, y=150, width=150, height=35)
-    Button(hamburgar_menu, text="خروج", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 17), command=date.destroy).place(x=0, y=550, width=150, height=50)
+    Label(hamburgar_menu, text="توبوکسا", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 17, "bold")).place(x=0, y=0, width=150, height=35)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=close_hamburgar).place(x=125, y=-7)
+    Button(hamburgar_menu, text="خانه", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 16), command=home).place(x=0, y=45, width=150, height=35)
+    Button(hamburgar_menu, text="محاسبه مساحت", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 16), command=area).place(x=0, y=80, width=150, height=35)
+    Button(hamburgar_menu, text="ماشین حساب", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 16), command=calculator).place(x=0, y=115, width=150, height=35)
+    Button(hamburgar_menu, text="مبدل واحد", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 16), command=unit_math).place(x=0, y=150, width=150, height=35)
+    Button(hamburgar_menu, text="خروج", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 17), command=date.destroy).place(x=0, y=550, width=150, height=50)
 
     # title and img
     Label(date, image=img, bg="light blue").place(x=150, y=0)
-    Label(date, text="تبدیل تاریخ", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=300, y=0)
+    Label(date, text="تبدیل تاریخ", bg="light blue", justify="center", font=("Vazirmatn Medium", 35, "bold")).place(x=300, y=0)
 
     # categories
 
     cadr = Frame(date, width=495, height=445, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
     cadr.place(x=150, y=150)
 
-    Label(cadr, text=": نوع تبدیل", bg="light blue", font=("Vazirmatn", 15, "bold")).place(x=300, y=0)
+    Label(cadr, text=": نوع تبدیل", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=300, y=0)
     type_con_t = StringVar()
-    type_con = ttk.Combobox(cadr, textvariable=type_con_t, values=("شمسی به میلادی", "میلادی به شمسی"), state="readonly", justify="center", font=("Vazirmatn", 10, "bold"))
+    type_con = ttk.Combobox(cadr, textvariable=type_con_t, values=("شمسی به میلادی", "میلادی به شمسی"), state="readonly", justify="center", font=("Vazirmatn Medium", 10, "bold"))
     type_con.place(x=135, y=5)
 
     def show_comboboxes(event):
         global day, month, year
         type_s = type_con_t.get()
-        Label(cadr, text=": روز", bg="light blue", font=("Vazirmatn", 15, "bold")).place(x=420, y=40)
-        Label(cadr, text=": ماه", bg="light blue", font=("Vazirmatn", 15, "bold")).place(x=180, y=40)
-        Label(cadr, text=": سال", bg="light blue", font=("Vazirmatn", 15, "bold")).place(x=250, y=80)
+        Label(cadr, text=": روز", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=420, y=40)
+        Label(cadr, text=": ماه", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=180, y=40)
+        Label(cadr, text=": سال", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=250, y=80)
         sub.place(x=200, y=120)
         now.place(x=400, y=100)
         if type_s == "شمسی به میلادی":
             day = StringVar()
             r_d = range(1, 32)
-            day_s = ttk.Combobox(cadr, textvariable=day, values=tuple(r_d), state="readonly", justify="center", font=("Vazirmatn", 10, "bold"))
+            day_s = ttk.Combobox(cadr, textvariable=day, values=tuple(r_d), state="readonly", justify="center", font=("Vazirmatn Medium", 10, "bold"))
             day_s.place(x=250, y=45)
 
             month = StringVar()
             months = ("1-فروردین", "2-اردیبهشت", "3-خرداد", "4-تیر", "5-مرداد", "6-شهریور", "7-مهر", "8-آبان", "9-آذر", "10-دی", "11-بهمن", "12-اسفند")
-            month_s = ttk.Combobox(cadr, textvariable=month, values=months, state="readonly", justify="center", font=("Vazirmatn", 10, "bold"))
+            month_s = ttk.Combobox(cadr, textvariable=month, values=months, state="readonly", justify="center", font=("Vazirmatn Medium", 10, "bold"))
             month_s.place(x=10, y=45)
 
-            year = Entry(cadr, justify="center", font=("Vazirmatn", 10, "bold"))
+            year = Entry(cadr, justify="center", font=("Vazirmatn Medium", 10, "bold"))
             year.place(x=100, y=85)
         elif type_s == "میلادی به شمسی":
             day = StringVar()
             r_d = range(1, 32)
-            day_s = ttk.Combobox(cadr, textvariable=day, values=tuple(r_d), state="readonly", justify="center", font=("Vazirmatn", 10, "bold"))
+            day_s = ttk.Combobox(cadr, textvariable=day, values=tuple(r_d), state="readonly", justify="center", font=("Vazirmatn Medium", 10, "bold"))
             day_s.place(x=250, y=45)
 
             month = StringVar()
             months = ("1-January(ژانویه)", "2-February(فوریه)", "3-March(مارس)", "4-April(آوریل)", "5-May(مه)", "6-June(ژوئن)", "7-July(ژوئیه)", "8-August(اوت)", "9-September(سپتامبر)", "10-October(اکتبر)", "11-November(نوامبر)", "12-December(دسامبر)")
-            month_s = ttk.Combobox(cadr, textvariable=month, values=months, state="readonly", justify="center", font=("Vazirmatn", 10, "bold"))
+            month_s = ttk.Combobox(cadr, textvariable=month, values=months, state="readonly", justify="center", font=("Vazirmatn Medium", 10, "bold"))
             month_s.place(x=10, y=45)
 
-            year = Entry(cadr, justify="center", font=("Vazirmatn", 10, "bold"))
+            year = Entry(cadr, justify="center", font=("Vazirmatn Medium", 10, "bold"))
             year.place(x=100, y=85)
 
     type_con.bind("<<ComboboxSelected>>", show_comboboxes)
@@ -206,9 +206,9 @@ def open_date_page(pre_page):
             year.delete(0, END)
             year.insert(0, today[0])
 
-    sub = Button(cadr, text="محاسبه کن", bg="light blue", font=("Vazirmatn", 15, "bold"), command=convert)
-    now = Button(cadr, text="برو به امروز", bg="light blue", font=("Vazirmatn", 8, "bold"), command=set_now)
-    result = Label(cadr, bg="light blue", font=("Vazirmatn", 15, "bold"))
+    sub = Button(cadr, text="محاسبه کن", bg="light blue", font=("Vazirmatn Medium", 15, "bold"), command=convert)
+    now = Button(cadr, text="برو به امروز", bg="light blue", font=("Vazirmatn Medium", 8, "bold"), command=set_now)
+    result = Label(cadr, bg="light blue", font=("Vazirmatn Medium", 15, "bold"))
     result.place(x=200, y=180)
 
     date.mainloop()

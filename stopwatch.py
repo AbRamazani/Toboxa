@@ -58,18 +58,18 @@ def open_stopwatch_page(pre_page):
         from qrcode_maker import open_qrcode_maker_page
         open_qrcode_maker_page(stopwatch)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="تایمر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=timer).place(x=0, y=65)
-    Button(hamburgar_menu, text="سرعت اینرنت", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=net_speed).place(x=0, y=100)
-    Button(hamburgar_menu, text="تولیدکننده رمز", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=password_maker).place(x=0, y=135)
-    Button(hamburgar_menu, text="تولیدکننده\nQRcode", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=qrcode_maker).place(x=0, y=170)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=stopwatch.destroy).place(x=0, y=550)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15, "bold")).place(x=0, y=0)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=close_hamburgar).place(x=125, y=0)
+    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=home).place(x=0, y=30)
+    Button(hamburgar_menu, text="تایمر", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=timer).place(x=0, y=65)
+    Button(hamburgar_menu, text="سرعت اینرنت", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=net_speed).place(x=0, y=100)
+    Button(hamburgar_menu, text="تولیدکننده رمز", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=password_maker).place(x=0, y=135)
+    Button(hamburgar_menu, text="تولیدکننده\nQRcode", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=qrcode_maker).place(x=0, y=170)
+    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=stopwatch.destroy).place(x=0, y=550)
 
     # title and img
     Label(stopwatch, image=img, bg="light blue").place(x=150, y=0)
-    Label(stopwatch, text="کرنومتر", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=365, y=0)
+    Label(stopwatch, text="کرنومتر", bg="light blue", justify="center", font=("Vazirmatn Medium", 35, "bold")).place(x=365, y=0)
 
     # categories
 
@@ -80,28 +80,28 @@ def open_stopwatch_page(pre_page):
     mode = ""
     reset_m = False
 
-    h_t = Label(cadr,font=('Vazirmatn',15,'bold'), text="ساعت", relief="ridge", bg="light blue")                
+    h_t = Label(cadr,font=('Vazirmatn Medium',15,'bold'), text="ساعت", relief="ridge", bg="light blue")                
     h_t.place(y=0, x=0, width=121.5, height=45)
 
-    m_t = Label(cadr,font=('Vazirmatn',15,'bold'), text="دقیقه", relief="ridge", bg="light blue")                
+    m_t = Label(cadr,font=('Vazirmatn Medium',15,'bold'), text="دقیقه", relief="ridge", bg="light blue")                
     m_t.place(y=0, x=121.5, width=121.5, height=45)
 
-    s_t = Label(cadr,font=('Vazirmatn',15,'bold'), text="ثانیه", relief="ridge", bg="light blue")                
+    s_t = Label(cadr,font=('Vazirmatn Medium',15,'bold'), text="ثانیه", relief="ridge", bg="light blue")                
     s_t.place(y=0, x=243, width=121.5, height=45)
 
-    ss_t = Label(cadr,font=('Vazirmatn',15,'bold'), text="صدم ثانیه", relief="ridge", bg="light blue")                
+    ss_t = Label(cadr,font=('Vazirmatn Medium',15,'bold'), text="صدم ثانیه", relief="ridge", bg="light blue")                
     ss_t.place(y=0, x=364.5, width=121.5, height=45)
 
-    h = Label(cadr,font=('Vazirmatn',15,'bold'), text="0", relief="ridge", bg="light blue")                
+    h = Label(cadr,font=('Vazirmatn Medium',15,'bold'), text="0", relief="ridge", bg="light blue")                
     h.place(y=45, x=0, width=121.5, height=45)
 
-    m = Label(cadr,font=('Vazirmatn',15,'bold'), text="00", relief="ridge", bg="light blue")                
+    m = Label(cadr,font=('Vazirmatn Medium',15,'bold'), text="00", relief="ridge", bg="light blue")                
     m.place(y=45, x=121.5, width=121.5, height=45)
 
-    s = Label(cadr,font=('Vazirmatn',15,'bold'), text="00", relief="ridge", bg="light blue")                
+    s = Label(cadr,font=('Vazirmatn Medium',15,'bold'), text="00", relief="ridge", bg="light blue")                
     s.place(y=45, x=243, width=121.5, height=45)
 
-    ss = Label(cadr,font=('Vazirmatn',15,'bold'), text="00", relief="ridge", bg="light blue")                
+    ss = Label(cadr,font=('Vazirmatn Medium',15,'bold'), text="00", relief="ridge", bg="light blue")                
     ss.place(y=45, x=364.5, width=121.5, height=45)
 
     def second_go():
@@ -193,16 +193,16 @@ def open_stopwatch_page(pre_page):
         s_second = ss["text"]
         laps.insert(END, f"{hour}:{minute}:{second}.{s_second}")
 
-    start_b = Button(cadr, text="شروع", bg="light blue", font=('Vazirmatn',15,'bold'), command=start)
+    start_b = Button(cadr, text="شروع", bg="light blue", font=('Vazirmatn Medium',15,'bold'), command=start)
     start_b.place(x=0, y=100, width=486, height=45)
 
-    stop_b = Button(cadr, text="توقف", bg="light blue", font=('Vazirmatn',15,'bold'), command=stop)
-    cont_b = Button(cadr, text="ادامه", bg="light blue", font=('Vazirmatn',15,'bold'), command=cont)
-    reset_b = Button(cadr, text="بازنشانی", bg="light blue", font=('Vazirmatn',15,'bold'), command=reset)
+    stop_b = Button(cadr, text="توقف", bg="light blue", font=('Vazirmatn Medium',15,'bold'), command=stop)
+    cont_b = Button(cadr, text="ادامه", bg="light blue", font=('Vazirmatn Medium',15,'bold'), command=cont)
+    reset_b = Button(cadr, text="بازنشانی", bg="light blue", font=('Vazirmatn Medium',15,'bold'), command=reset)
 
-    lap_b = Button(cadr, text="ثبت", bg="light blue", font=('Vazirmatn',15,'bold'), command=lap)
+    lap_b = Button(cadr, text="ثبت", bg="light blue", font=('Vazirmatn Medium',15,'bold'), command=lap)
 
-    laps = Listbox(cadr, bg="light blue", fg="#01ab8c", font=("Vazirmatn", 12)) 
+    laps = Listbox(cadr, bg="light blue", fg="#01ab8c", font=("Vazirmatn Medium", 12)) 
 
     sb_list = Scrollbar(cadr)
 

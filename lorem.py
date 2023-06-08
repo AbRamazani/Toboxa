@@ -53,36 +53,36 @@ def open_lorem_page(pre_page):
         from compress import open_compress_page
         open_compress_page(lorem)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="فشرده‌سازی\n‌فایل‌های‌وب", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=compress).place(x=0, y=65)
-    Button(hamburgar_menu, text="ویرایشگر متن", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=text_editor).place(x=0, y=135)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=lorem.destroy).place(x=0, y=550)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15, "bold")).place(x=0, y=0)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=close_hamburgar).place(x=125, y=0)
+    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=home).place(x=0, y=30)
+    Button(hamburgar_menu, text="فشرده‌سازی\n‌فایل‌های‌وب", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=compress).place(x=0, y=65)
+    Button(hamburgar_menu, text="ویرایشگر متن", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=text_editor).place(x=0, y=135)
+    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=lorem.destroy).place(x=0, y=550)
 
     # title and img
     Label(lorem, image=img, bg="light blue").place(x=150, y=0)
-    Label(lorem, text="لورم ساز", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=400, y=0)
+    Label(lorem, text="لورم ساز", bg="light blue", justify="center", font=("Vazirmatn Medium", 35, "bold")).place(x=400, y=0)
 
     # categories
 
     cadr = Frame(lorem, width=495, height=445, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
     cadr.place(x=150, y=150)
 
-    Label(cadr, text=": نوع خروجی", bg="light blue", font=("Vazirmatn", 15, "bold")).place(x=350, y=0)
+    Label(cadr, text=": نوع خروجی", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=350, y=0)
     type_l = StringVar()
-    type_l_cadr = ttk.Combobox(cadr, textvariable=type_l, values=("پاراگراف", "جمله", "کلمه"), state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).place(x=185, y=5)
+    type_l_cadr = ttk.Combobox(cadr, textvariable=type_l, values=("پاراگراف", "جمله", "کلمه"), state="readonly", justify="center", font=("Vazirmatn Medium", 10, "bold")).place(x=185, y=5)
 
     is_reandom = IntVar()
-    is_reandom_cadr = Checkbutton(cadr, text="تصادفی", variable=is_reandom, bg="light blue", font=("Vazirmatn", 15, "bold")).place(x=50, y=0)
+    is_reandom_cadr = Checkbutton(cadr, text="تصادفی", variable=is_reandom, bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=50, y=0)
 
-    Label(cadr, text=": زبان خروجی", bg="light blue", font=("Vazirmatn", 15, "bold")).place(x=350, y=50)
+    Label(cadr, text=": زبان خروجی", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=350, y=50)
     language = StringVar()
-    language_cadr = ttk.Combobox(cadr, textvariable=language, values=("français", "English", "فارسی", "العَرَبِيّة", "русский", "Deutsch"), state="readonly", justify="center", font=("Vazirmatn", 10, "bold")).place(x=185, y=55)
+    language_cadr = ttk.Combobox(cadr, textvariable=language, values=("français", "English", "فارسی", "العَرَبِيّة", "русский", "Deutsch"), state="readonly", justify="center", font=("Vazirmatn Medium", 10, "bold")).place(x=185, y=55)
 
-    Label(cadr, text=": تکرار", bg="light blue", font=("Vazirmatn", 15, "bold")).place(x=90, y=50)
+    Label(cadr, text=": تکرار", bg="light blue", font=("Vazirmatn Medium", 15, "bold")).place(x=90, y=50)
     repeat = IntVar()
-    repeat_cadr = Spinbox(cadr, from_=0, to=100, textvariable=repeat, wrap=True, font=("Vazirmatn", 13, "bold"), width=2).place(x=50, y=50)
+    repeat_cadr = Spinbox(cadr, from_=0, to=100, textvariable=repeat, wrap=True, font=("Vazirmatn Medium", 13, "bold"), width=2).place(x=50, y=50)
     
 
     def make_lorem():
@@ -202,9 +202,9 @@ def open_lorem_page(pre_page):
 
             
 
-    Button(cadr, text="بساز", bg="light blue", font=("Vazirmatn", 15, "bold"), width=35, command=make_lorem).place(x=50, y=105)
+    Button(cadr, text="بساز", bg="light blue", font=("Vazirmatn Medium", 15, "bold"), width=35, command=make_lorem).place(x=50, y=105)
 
-    result = Text(cadr, font=("Vazirmatn", 13, "bold"), height=9, width=42, bg="light yellow")
+    result = Text(cadr, font=("Vazirmatn Medium", 13, "bold"), height=9, width=42, bg="light yellow")
     result.place(x=35, y=170)
     scroll = Scrollbar(cadr, command=result.yview, orient='vertical')
     scroll.place(x=20, y=171, height=246)
@@ -215,6 +215,6 @@ def open_lorem_page(pre_page):
         copy(text)
         messagebox.showinfo("کپی", "متن کپی شد")
 
-    Button(cadr, text="کپی", bg="light blue", font=("Vazirmatn", 10, "bold"), command=copy_result).place(x=458, y=399, width=30)
+    Button(cadr, text="کپی", bg="light blue", font=("Vazirmatn Medium", 10, "bold"), command=copy_result).place(x=458, y=399, width=30)
 
     lorem.mainloop()

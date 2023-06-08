@@ -58,17 +58,17 @@ def open_rotate_v_page(pre_page):
         from merge_video import open_merge_v_page
         open_merge_v_page(rotate_v)
 
-    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15, "bold")).place(x=0, y=0)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=0)
-    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=home).place(x=0, y=30)
-    Button(hamburgar_menu, text="برش ویدئو", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=crop_v).place(x=0, y=65)
-    Button(hamburgar_menu, text="تغییر پسوند", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=format_v).place(x=0, y=100)
-    Button(hamburgar_menu, text="ادغام ویدئوها", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=merge_v).place(x=0, y=135)
-    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=rotate_v.destroy).place(x=0, y=550)
+    Label(hamburgar_menu, text="توبوکسا", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15, "bold")).place(x=0, y=0)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=close_hamburgar).place(x=125, y=0)
+    Button(hamburgar_menu, text="خانه", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=home).place(x=0, y=30)
+    Button(hamburgar_menu, text="برش ویدئو", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=crop_v).place(x=0, y=65)
+    Button(hamburgar_menu, text="تغییر پسوند", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=format_v).place(x=0, y=100)
+    Button(hamburgar_menu, text="ادغام ویدئوها", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=merge_v).place(x=0, y=135)
+    Button(hamburgar_menu, text="خروج", width=13, bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=rotate_v.destroy).place(x=0, y=550)
 
     # title and img
     Label(rotate_v, image=img, bg="light blue").place(x=150, y=0)
-    Label(rotate_v, text="چرخاندن ویدئو", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=325, y=0)
+    Label(rotate_v, text="چرخاندن ویدئو", bg="light blue", justify="center", font=("Vazirmatn Medium", 35, "bold")).place(x=325, y=0)
 
     # categories
 
@@ -81,7 +81,7 @@ def open_rotate_v_page(pre_page):
         vid_p.title(f"Toboxa=>rotate video=>{path.split('/')[-1]}")
         vid_p.resizable(width=False, height=False)
         vid_p.geometry("600x400")
-        Label(vid_p, text="توجه : تصویر زیر تنها برای نمایش خروجی است و خروجی با کیفیت اصلی ذخیره می شود", bg="light blue", font=("Vazirmatn", 10, "bold"), fg="red").pack()
+        Label(vid_p, text="توجه : تصویر زیر تنها برای نمایش خروجی است و خروجی با کیفیت اصلی ذخیره می شود", bg="light blue", font=("Vazirmatn Medium", 10, "bold"), fg="red").pack()
 
         vidcap = cv2.VideoCapture(path)
         success,image = vidcap.read()
@@ -123,10 +123,10 @@ def open_rotate_v_page(pre_page):
             rotate_val.set(rotate_value)
             rotate_show()
 
-        Label(vid_p, text="میزان چرخش(پادساعتگرد)", bg="light blue", font=("Vazirmatn", 14, "bold")).pack()
+        Label(vid_p, text="میزان چرخش(پادساعتگرد)", bg="light blue", font=("Vazirmatn Medium", 14, "bold")).pack()
 
         rotate_val = IntVar(value=360)
-        rotate_s = Spinbox(vid_p, font=("Vazirmatn", 15, "bold"), textvariable=rotate_val, from_=1, to=360, wrap=True, command=rotate_show)
+        rotate_s = Spinbox(vid_p, font=("Vazirmatn Medium", 15, "bold"), textvariable=rotate_val, from_=1, to=360, wrap=True, command=rotate_show)
         rotate_s.pack()
 
         rotate_s.bind("<Key>", rotate_show)
@@ -165,7 +165,7 @@ def open_rotate_v_page(pre_page):
                 vid_p.destroy()
                 messagebox.showinfo("ذخیره کردن ویدئو", ".ویدئو با موفقیت ذخیره شد")
 
-        render = Button(vid_p, text="انجام", bg="light blue", font=("Vazirmatn", 15, "bold"), command=rotate).pack()
+        render = Button(vid_p, text="انجام", bg="light blue", font=("Vazirmatn Medium", 15, "bold"), command=rotate).pack()
 
         vid_p.mainloop()
 
@@ -178,6 +178,6 @@ def open_rotate_v_page(pre_page):
        
     select = PhotoImage(file="files/images/image/select_image.png")
     Button(cadr, image=select, bg="light blue", bd=0, activebackground="light blue", command=open_vid).place(x=150, y=0)
-    Button(cadr, text="انتخاب ویدئو", bg="light blue", font=("Vazirmatn", 17, "bold"), bd=0, activebackground="light blue", command=open_vid).place(x=185, y=200)
+    Button(cadr, text="انتخاب ویدئو", bg="light blue", font=("Vazirmatn Medium", 17, "bold"), bd=0, activebackground="light blue", command=open_vid).place(x=185, y=200)
 
     rotate_v.mainloop()

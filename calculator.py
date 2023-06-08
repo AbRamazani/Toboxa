@@ -55,24 +55,24 @@ def open_calculator_page(pre_page):
         from unit_math import open_unit_math_page
         open_unit_math_page(calculator)
 
-    Label(hamburgar_menu, text="توبوکسا", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 17, "bold")).place(x=0, y=0, width=150, height=35)
-    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 15), command=close_hamburgar).place(x=125, y=-7)
-    Button(hamburgar_menu, text="خانه", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=home).place(x=0, y=45, width=150, height=35)
-    Button(hamburgar_menu, text="محاسبه مساحت", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=area).place(x=0, y=80, width=150, height=35)
-    Button(hamburgar_menu, text="تبدیل تاریخ", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=date).place(x=0, y=115, width=150, height=35)
-    Button(hamburgar_menu, text="مبدل واحد", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 16), command=unit_math).place(x=0, y=150, width=150, height=35)
-    Button(hamburgar_menu, text="خروج", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn", 17), command=calculator.destroy).place(x=0, y=550, width=150, height=50)
+    Label(hamburgar_menu, text="توبوکسا", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 17, "bold")).place(x=0, y=0, width=150, height=35)
+    Button(hamburgar_menu, text="×", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 15), command=close_hamburgar).place(x=125, y=-7)
+    Button(hamburgar_menu, text="خانه", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 16), command=home).place(x=0, y=45, width=150, height=35)
+    Button(hamburgar_menu, text="محاسبه مساحت", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 16), command=area).place(x=0, y=80, width=150, height=35)
+    Button(hamburgar_menu, text="تبدیل تاریخ", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 16), command=date).place(x=0, y=115, width=150, height=35)
+    Button(hamburgar_menu, text="مبدل واحد", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 16), command=unit_math).place(x=0, y=150, width=150, height=35)
+    Button(hamburgar_menu, text="خروج", bg="#01ab8c", fg="white", bd=0, font=("Vazirmatn Medium", 17), command=calculator.destroy).place(x=0, y=550, width=150, height=50)
 
     # title and img
     Label(calculator, image=img, bg="light blue").place(x=150, y=0)
-    Label(calculator, text="ماشین حساب", bg="light blue", justify="center", font=("Vazirmatn", 35, "bold")).place(x=300, y=0)
+    Label(calculator, text="ماشین حساب", bg="light blue", justify="center", font=("Vazirmatn Medium", 35, "bold")).place(x=300, y=0)
 
     # categories
 
     cadr = Frame(calculator, width=495, height=445, bg="light blue", highlightbackground="#01ab8c", highlightthickness=5)
     cadr.place(x=150, y=150)
 
-    display = Entry(cadr, font=('Vazirmatn bold', 20), justify='left', borderwidth=15, bg="#57B2C7")
+    display = Entry(cadr, font=('Vazirmatn Medium bold', 20), justify='left', borderwidth=15, bg="#57B2C7")
     display.place(x=0, y=0, width=485)
 
     def click_app(ap):
@@ -105,31 +105,31 @@ def open_calculator_page(pre_page):
     display.bind("<Return>", result)
     display.bind("<Key>", clear)
 
-    Button7 = Button(cadr, text=7, font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("7")).place(x=0, y=133, width=121.25, height=63)
-    Button8 = Button(cadr, text=8, font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("8")).place(x=121.25, y=133, width=121.25, height=63)
-    Button9 = Button(cadr, text=9, font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("9")).place(x=242.5, y=133, width=121.25, height=63)
-    Buttonmul = Button(cadr, text="×", font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("×")).place(x=363.74, y=133, width=121.25, height=63)
+    Button7 = Button(cadr, text=7, font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("7")).place(x=0, y=133, width=121.25, height=63)
+    Button8 = Button(cadr, text=8, font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("8")).place(x=121.25, y=133, width=121.25, height=63)
+    Button9 = Button(cadr, text=9, font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("9")).place(x=242.5, y=133, width=121.25, height=63)
+    Buttonmul = Button(cadr, text="×", font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("×")).place(x=363.74, y=133, width=121.25, height=63)
 
-    Button4 = Button(cadr, text=4, font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("4")).place(x=0, y=196, width=121.25, height=63)
-    Button5 = Button(cadr, text=5, font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("5")).place(x=121.25, y=196, width=121.25, height=63)
-    Button6 = Button(cadr, text=6, font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("6")).place(x=242.5, y=196, width=121.25, height=63)
-    Buttonsub = Button(cadr, text="-", font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("-")).place(x=363.74, y=196, width=121.25, height=63)
+    Button4 = Button(cadr, text=4, font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("4")).place(x=0, y=196, width=121.25, height=63)
+    Button5 = Button(cadr, text=5, font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("5")).place(x=121.25, y=196, width=121.25, height=63)
+    Button6 = Button(cadr, text=6, font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("6")).place(x=242.5, y=196, width=121.25, height=63)
+    Buttonsub = Button(cadr, text="-", font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("-")).place(x=363.74, y=196, width=121.25, height=63)
 
-    Button1 = Button(cadr, text=1, font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("1")).place(x=0, y=259, width=121.25, height=63)
-    Button2 = Button(cadr, text=2, font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("2")).place(x=121.25, y=259, width=121.25, height=63)
-    Button3 = Button(cadr, text=3, font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("3")).place(x=242.5, y=259, width=121.25, height=63)
-    Buttonplus = Button(cadr, text="+", font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("+")).place(x=363.74, y=259, width=121.25, height=63)
+    Button1 = Button(cadr, text=1, font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("1")).place(x=0, y=259, width=121.25, height=63)
+    Button2 = Button(cadr, text=2, font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("2")).place(x=121.25, y=259, width=121.25, height=63)
+    Button3 = Button(cadr, text=3, font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("3")).place(x=242.5, y=259, width=121.25, height=63)
+    Buttonplus = Button(cadr, text="+", font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("+")).place(x=363.74, y=259, width=121.25, height=63)
 
-    Button_c = Button(cadr, text="C", font=("Vazirmatn", 30, "bold"), bg="light blue", command=clear).place(x=0, y=322, width=121.25, height=63)
-    Button0 = Button(cadr, text=0, font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("0")).place(x=121.25, y=322, width=121.25, height=63)
-    Buttonra = Button(cadr, text="/", font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("/")).place(x=242.5, y=322, width=121.25, height=63)
-    Buttonequ = Button(cadr, text="=", font=("Vazirmatn", 30, "bold"), bg="light blue", command=result).place(x=363.74, y=322, width=121.25, height=63)    
+    Button_c = Button(cadr, text="C", font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=clear).place(x=0, y=322, width=121.25, height=63)
+    Button0 = Button(cadr, text=0, font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("0")).place(x=121.25, y=322, width=121.25, height=63)
+    Buttonra = Button(cadr, text="/", font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("/")).place(x=242.5, y=322, width=121.25, height=63)
+    Buttonequ = Button(cadr, text="=", font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=result).place(x=363.74, y=322, width=121.25, height=63)    
 
-    Buttondel = Button(cadr, text="Del", font=("Vazirmatn", 30, "bold"), bg="light blue", command=delete_last).place(x=0, y=70, width=121.25, height=63)
-    Buttondiv = Button(cadr, text="÷", font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("÷")).place(x=121.25, y=70, width=121.25, height=63)
-    Buttonexp = Button(cadr, text="x", font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("^")).place(x=242.5, y=70, width=121.25, height=63)
-    Button(cadr, text="x", bg="light blue", font=("Vazirmatn", 8, "bold"), bd=0, command=lambda: click_app("^")).place(x=310, y=75)
-    Buttonbra_o = Button(cadr, text="(", font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app("(")).place(x=363.74, y=70, width=60.625, height=63)
-    Buttonbra_c = Button(cadr, text=")", font=("Vazirmatn", 30, "bold"), bg="light blue", command=lambda: click_app(")")).place(x=424.365, y=70, width=60.625, height=63)
+    Buttondel = Button(cadr, text="Del", font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=delete_last).place(x=0, y=70, width=121.25, height=63)
+    Buttondiv = Button(cadr, text="÷", font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("÷")).place(x=121.25, y=70, width=121.25, height=63)
+    Buttonexp = Button(cadr, text="x", font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("^")).place(x=242.5, y=70, width=121.25, height=63)
+    Button(cadr, text="x", bg="light blue", font=("Vazirmatn Medium", 8, "bold"), bd=0, command=lambda: click_app("^")).place(x=310, y=75)
+    Buttonbra_o = Button(cadr, text="(", font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app("(")).place(x=363.74, y=70, width=60.625, height=63)
+    Buttonbra_c = Button(cadr, text=")", font=("Vazirmatn Medium", 30, "bold"), bg="light blue", command=lambda: click_app(")")).place(x=424.365, y=70, width=60.625, height=63)
 
     calculator.mainloop()
